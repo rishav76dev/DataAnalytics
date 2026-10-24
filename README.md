@@ -4,6 +4,12 @@ A runnable Python research implementation for islanded **PV + wind + LFP-style b
 
 **Research status:** synthetic engineering demonstration. This repository does not yet establish a novel method, calibrated LFP lifetime, or a publishable advantage. The demo deliberately reports infeasibility and negative results. No public dataset was specified in the supplied plan; no dataset licence or provenance has been invented.
 
+## Guides
+
+- [Setup and installation](SETUP.md)
+- [Evaluation and reproduction](EVALUATION.md)
+- [Recorded results and limitations](RESULTS.md)
+
 ## Run
 
 Python 3.12+ and [uv](https://docs.astral.sh/uv/) are required. From this checkout:
