@@ -1,0 +1,30 @@
+\documentclass{article}
+\usepackage{amsmath,graphicx}
+\title{Adaptive Energy-Reserve Control for Islanded Microgrids: Research Workbench}
+\author{Author details pending}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+This is a manuscript scaffold, not a completed research submission. The accompanying
+software implements causal quantile forecasting, joint empirical scenarios,
+backward reserve estimation, physical battery projection, and dispatch baselines.
+No empirical improvement or novelty claim is made.
+\end{abstract}
+\section{System model}
+Battery power is positive on discharge. The bus balance is
+$P_{\rm PV}+P_{\rm wind}+P_b+P_{\rm unmet}=P_{\rm load}+P_{\rm curtailed}$.
+\section{Adaptive reserve}
+For scenario $s$, backward minimum-energy recursion returns $E_{\rm req}^{(s)}$,
+including infinity for infeasibility. The target is the empirical
+$Q_{1-\alpha}(E_{\rm req})$ over all scenarios.
+\section{Experimental protocol}
+Document the dataset licence and provenance, chronological splits, frozen model
+and configuration hashes, seed selection, feasibility and statistical protocol.
+\section{Results pending}
+Synthetic engineering outputs are not evidence of real-world superiority.
+Replace this section only after completing the preregistered empirical study.
+\section{Limitations}
+The current ageing sensitivity model is unvalidated. Scenario recourse is two-stage,
+and uncertainty guarantees require further calibration and out-of-sample study.
+\end{document}

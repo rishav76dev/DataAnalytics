@@ -1,0 +1,14 @@
+battery:
+  capacity_kwh: 100.0
+  power_kw: 50.0
+  soc_min: 0.1
+  soc_max: 0.9
+  initial_soc: 0.5
+  charge_efficiency: 0.95
+  discharge_efficiency: 0.95
+  soh: 1.0
+  dt_hours: 1.0
+horizon: 24
+risk_alpha: 0.05
+scenario_count: 100
+seed: 42

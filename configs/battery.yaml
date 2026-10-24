@@ -1,0 +1,7 @@
+# Illustrative sensitivity model, NOT published or calibrated LFP parameters.
+model_status: illustrative_unvalidated
+reference_cycles: 4000
+reference_depth: 0.8
+cycle_exponent: 1.5
+calendar_loss_per_year: 0.02
+assumed_temperature_c: 25

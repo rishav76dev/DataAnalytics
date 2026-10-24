@@ -1,0 +1,7 @@
+split_fractions: [0.60, 0.15, 0.10, 0.15]
+seeds: [42, 43, 44]
+primary_metric: eens_kwh
+reliability_target_lpsp: 0.01
+bootstrap_block_hours: 24
+bootstrap_replicates: 1000
+final_test_policy: Freeze configuration and model hashes before inspecting final-test outcomes.
