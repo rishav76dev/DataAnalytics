@@ -1,0 +1,86 @@
+{
+  "vanilla_42": {
+    "budget": 10000,
+    "checkpoint": "outputs/india_study/rl/vanilla_42_10000.zip",
+    "eens_kwh": 288.0729912960864,
+    "published_loss": 0.013226012149088917,
+    "sha256": "42da4a158dd5c42a256cb7cfdc06549b6e354fd713043ae014b18d8f12f95fc1"
+  },
+  "vanilla_43": {
+    "budget": 10000,
+    "checkpoint": "outputs/india_study/rl/vanilla_43_10000.zip",
+    "eens_kwh": 411.8074431786098,
+    "published_loss": 0.0131910053806793,
+    "sha256": "f616b2a27a4f4776b588847fa307acc32f8158c327e0aff5e2ffcf73790aa9af"
+  },
+  "vanilla_44": {
+    "budget": 30000,
+    "checkpoint": "outputs/india_study/rl/vanilla_44_30000.zip",
+    "eens_kwh": 231.90585051399887,
+    "published_loss": 0.013169431398773468,
+    "sha256": "09ae7c0ed737b1fc99d7459f4206e03c4a9ed9691344b0b4020a1b35ce7b62eb"
+  },
+  "fixed_42": {
+    "budget": 10000,
+    "checkpoint": "outputs/india_study/rl/fixed_42_10000.zip",
+    "eens_kwh": 231.90585051399887,
+    "published_loss": 0.013213780479113701,
+    "sha256": "7d1e042ad8560e0a9f6ecb564e6b58af78e2f3cc5a4dc428a16fae76bf9cb4ca"
+  },
+  "fixed_43": {
+    "budget": 10000,
+    "checkpoint": "outputs/india_study/rl/fixed_43_10000.zip",
+    "eens_kwh": 2567.945413560099,
+    "published_loss": 0.012870897067356113,
+    "sha256": "6a7d9e224cd1438dd8b391cf26a78bc2bfb675874918dde7fccff32903909daa"
+  },
+  "fixed_44": {
+    "budget": 30000,
+    "checkpoint": "outputs/india_study/rl/fixed_44_30000.zip",
+    "eens_kwh": 452.32321356462137,
+    "published_loss": 0.013216267289343886,
+    "sha256": "b596bbf8a8a338822ff1b66c9452a4fbd2cac28a95db63dd93342cd39c8220be"
+  },
+  "adaptive_42": {
+    "budget": 30000,
+    "checkpoint": "outputs/india_study/rl/adaptive_42_30000.zip",
+    "eens_kwh": 236.65083949007015,
+    "published_loss": 0.013142901595756817,
+    "sha256": "96a9cff26e1bf8d70a304c3b7a783fc2d24cc80d3c85e98fad96956423042a8a"
+  },
+  "adaptive_43": {
+    "budget": 10000,
+    "checkpoint": "outputs/india_study/rl/adaptive_43_10000.zip",
+    "eens_kwh": 246.27240731209574,
+    "published_loss": 0.013197965978580362,
+    "sha256": "d2d91a7c55684c8a294d78f8c972ff98bc3db2e7bc1af892c478bd79191686fe"
+  },
+  "adaptive_44": {
+    "budget": 30000,
+    "checkpoint": "outputs/india_study/rl/adaptive_44_30000.zip",
+    "eens_kwh": 274.1072759418838,
+    "published_loss": 0.013243364049372763,
+    "sha256": "6c42a2c0e6e792bc4f129bd5f54616845b890d7e7e6964996f1461b455c46f00"
+  },
+  "constrained_42": {
+    "budget": 10000,
+    "checkpoint": "outputs/india_study/rl/constrained_42_10000.zip",
+    "eens_kwh": 231.90585051399887,
+    "published_loss": 0.013100508842240899,
+    "sha256": "1a6375576087753aa8bcf6fabf0aa56076c77c0646638a4ce298fe463ae368c2"
+  },
+  "constrained_43": {
+    "budget": 10000,
+    "checkpoint": "outputs/india_study/rl/constrained_43_10000.zip",
+    "eens_kwh": 236.19863098461036,
+    "published_loss": 0.013188688918500446,
+    "sha256": "fb5313c489f2e64526842a353227e3cb938a41b65420874399b6f7100d4ef52a"
+  },
+  "constrained_44": {
+    "budget": 10000,
+    "checkpoint": "outputs/india_study/rl/constrained_44_10000.zip",
+    "eens_kwh": 332.11566230250423,
+    "published_loss": 0.013222683667047819,
+    "sha256": "aad4142fa0997a5a4600a29c03869f76bbd2a5dc67bdb3cfaa43afa9f6bf7503"
+  }
+}

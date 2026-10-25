@@ -1,2 +1,25 @@
-% Intentionally empty: add only independently verified sources.
-% A published and validated LFP ageing parameterization remains required.
+@misc{power,
+  author = {{NASA POWER Project}},
+  title = {Prediction Of Worldwide Energy Resources: Hourly Data Services},
+  url = {https://power.larc.nasa.gov/docs/services/api/},
+  note = {Jaisalmer point weather, UTC, 2020--2024; request URLs and hashes retained}
+}
+@misc{blast,
+  author = {Gasper, Paul and Prakash, Nina and Smith, Kandler},
+  title = {{BLAST-Lite}: Battery Lifetime Analysis and Simulation Toolsuite},
+  url = {https://github.com/NREL/BLAST-Lite},
+  note = {Pinned commit b093495b47dc40dd96dba865d91f553619501e94, model lfp\_gr\_250AhPrismatic\_2019.py; experimental data DOI 10.1016/j.est.2023.109042 cited by upstream. BSD licence retained.}
+}
+@misc{demand,
+  author = {Kumar, S. and Mukherjee, D. and Kalita, K.},
+  title = {Electricity Demand, Solar and Wind Generation Data (September 2021--June 2025) of India at 1-hour interval},
+  year = {2025},
+  doi = {10.17632/y58jknpgs8.2},
+  note = {Mendeley Data V2. Citation and CC BY 4.0 attribution reported by the secondary mirror; primary metadata was not independently accessed.}
+}
+@misc{mirror,
+  author = {{RudranshVyas}},
+  title = {India Grid Demand and Renewable Generation Forecasting},
+  url = {https://github.com/RudranshVyas/india-grid-forecast},
+  note = {Secondary hourly-data mirror and data dictionary, pinned commit 9fc756aeceefb2e53d6494d48722f5dd771996e0. No code from this repository is incorporated.}
+}

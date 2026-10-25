@@ -1,0 +1,152 @@
+{
+  "case": "constructed_Jaisalmer_weather_scaled_national_demand_proxy",
+  "source_audit": {
+    "rows": 26304,
+    "start": "2021-12-31 18:30:00+00:00",
+    "end": "2024-12-31 17:30:00+00:00",
+    "missing_hours": 0,
+    "units": {
+      "pv_kw": "kW",
+      "wind_kw": "kW",
+      "load_kw": "kW"
+    },
+    "energy_kwh": {
+      "pv_kw": 244605.83094651217,
+      "wind_kw": 91904.81891037466,
+      "load_kw": 323791.53546107095
+    },
+    "case": "constructed_indian_reference_not_measured_local_microgrid",
+    "weather_source": "NASA POWER Jaisalmer gridded weather",
+    "demand_source_doi": "10.17632/y58jknpgs8.2",
+    "demand_authors": "Kumar, S.; Mukherjee, D.; Kalita, K. (2025)",
+    "source_url": "https://raw.githubusercontent.com/RudranshVyas/india-grid-forecast/9fc756aeceefb2e53d6494d48722f5dd771996e0/data/processed/hourly_raw.parquet",
+    "mirror_commit": "9fc756aeceefb2e53d6494d48722f5dd771996e0",
+    "source_raw_sha256": "c77ed3e200565c5609bd52806bef98f4e7eac22da6609d60750c8ce7a5fb75ed",
+    "weather_sha256": "6b5ff2290efc85c5157ca06fc64ee99b5aa18ed0afccdee67544690957800ce1",
+    "licence": "CC BY 4.0 reported in mirror documentation; primary Mendeley record blocked by proxy",
+    "primary_source_verification": "pending_not_independently_verified",
+    "demand_kind": "scaled_national_aggregate_proxy",
+    "units_before_scaling": "MW, according to mirror data dictionary",
+    "timezone_interpretation": "Asia/Kolkata according to mirror; not independently source-confirmed",
+    "weather_alignment": "half-overlap mean of adjacent UTC hours, piecewise constant hourly weather assumption",
+    "demand_outliers_repaired": 6,
+    "repair": "causal forward fill, maximum 3 hours, bounds 50,000\u2013300,000 MW",
+    "demand_target_training_mean_kw": 12.0,
+    "demand_scale": 6.78578965861655e-08,
+    "generation_capacities_training_only": {
+      "pv_capacity_kw": 46.69144088020389,
+      "wind_capacity_kw": 60.557031343160006
+    },
+    "generation_model": "simplified PV derate and wind curve at 10m; no hub-height validation",
+    "split_indices": {
+      "train": [
+        0,
+        15782
+      ],
+      "validation": [
+        15782,
+        19727
+      ],
+      "calibration": [
+        19727,
+        22357
+      ],
+      "test": [
+        22357,
+        26304
+      ]
+    }
+  },
+  "data_sha256": "2eecb44c811ba72368c1b225cfa7ee5793c33906a399c904d2e5c053a5bb1f1d",
+  "model_sha256": "45e420578423ed2d73e4c1f3860b835276291323668d9c5b3a85864077479222",
+  "code_sha256": {
+    "/workspace/DataAnalytics/scripts/final_india_benchmark.py": "a53dae295fe6947bbcf3efbcd72bf0a581c5d186c1b844a3a723de834a3c576f",
+    "src/microgrid/agents.py": "9abcba3da99f5aa88bce6cd321caaf9ee3bb541b5ac54f312dab075677dd8c8d",
+    "src/microgrid/ageing.py": "2df16d77e0e1187c6b10a073d6c6412c0a0d116c54af0a5ccfe9fed43bb2a4b5",
+    "src/microgrid/reserve.py": "d0c2e678459e68902420151c3956c9d5b4fe0713cc6eb6d1e32a82098436d136",
+    "src/microgrid/forecasting.py": "8f551aaade699bddf65f266a7ae768924d4314230e5c12c60bed3caf1af81194",
+    "src/microgrid/controllers.py": "9d50e3943be2f0700cd064ee92f965fea2de3b37866b3454da516bb368271b66",
+    "src/microgrid/__init__.py": "25e0ed1a3e403a51ed8ce4572f30d013548f1d191509f7f5170fe93ef835db8c",
+    "src/microgrid/calibration.py": "4693158feb78573fe1ecfd45123787ac21fa520e677826ca1481ce4d76cfa17e",
+    "src/microgrid/physics.py": "7973b531b8fcf6de3482936a3ba9362a67135565760fb8b6bd8125548d773853",
+    "src/microgrid/cli.py": "7598ef24d80465f8e7bb504a4e8e1bb1f38ac244c9b1660d3b805d4a3bfeb0e7",
+    "src/microgrid/reserve_study.py": "e25b046f2f919e1f85c5963c046f86d48a63909017f2db2a84d121d4d4f0d22f",
+    "src/microgrid/data.py": "4b6d223e7eb8f3873ba2779b186908aacdaa3c8a88372709353b9463c04795d3",
+    "src/microgrid/scenarios.py": "43e090da984cc8e2c0fbf07e82f5282cdad980fe93277da58dd3db66d10287b2",
+    "src/microgrid/feasibility.py": "f1a364e7e23f143ca1a98ecc92e62e22e2548f32fce86d53b30a449ea572d4e1",
+    "src/microgrid/environment.py": "ef195691e31b034880419a3d2a5f1411627bd90874643d0e56d0bda2b0bc6378",
+    "src/microgrid/india.py": "e2d0833d4e222770d1c5598f74f25fac252c96c2512b65b416a08783350b8afe",
+    "src/microgrid/evaluation.py": "99a8475ddec10205e7e3747a7a62c13af3e01862e00947c29e75ae7cdb84b022"
+  },
+  "battery": {
+    "capacity_kwh": 200.0,
+    "power_kw": 50.0,
+    "soc_min": 0.1,
+    "soc_max": 0.9,
+    "initial_soc": 0.5,
+    "charge_efficiency": 0.95,
+    "discharge_efficiency": 0.95,
+    "soh": 1.0,
+    "dt_hours": 1.0
+  },
+  "design_selection": "validation-only minimum capacity, then renewable scale, then power; not cost optimization",
+  "selected_design": {
+    "capacity_kwh": 200.0,
+    "power_kw": 50.0,
+    "renewable_scale": 3.0,
+    "initial_soc": 0.5,
+    "terminal": "initial",
+    "rule_based_eens_kwh": 231.90585051399887,
+    "eens_kwh": 231.90585051399842,
+    "lpsp_energy": 0.004871934228641916,
+    "loss_of_load_hours": 58.0,
+    "curtailment_kwh": 54935.18352361642,
+    "throughput_kwh": 46478.40857498493,
+    "demand_kwh": 47600.36561056854,
+    "reference": "non_deployable_complete_episode_EENS_optimum",
+    "terminal_policy": "initial",
+    "terminal_energy_kwh": 119.10398081127443,
+    "minimum_power_shortage_bound_kwh": 0.0,
+    "renewable_kwh": 104707.84863080489,
+    "max_balance_residual_kw": 2.842170943040401e-14,
+    "target_lpsp": 0.01,
+    "target_possible_under_foresight": true
+  },
+  "fixed_fraction": 0.4,
+  "fixed_tuning_start": 15782,
+  "fixed_tuning_stop": 16118,
+  "alpha": 0.05,
+  "scenario_count": 100,
+  "seed": 42,
+  "residual_blocks": 109,
+  "splits": {
+    "train": [
+      0,
+      15782
+    ],
+    "validation": [
+      15782,
+      19727
+    ],
+    "calibration": [
+      19727,
+      22357
+    ],
+    "test": [
+      22357,
+      26304
+    ]
+  },
+  "methods": [
+    "rule_based",
+    "deterministic_mpc",
+    "tuned_fixed_mpc",
+    "adaptive_max_fallback",
+    "adaptive_no_infeasible_target",
+    "independent_reserve_mpc",
+    "scenario_mpc"
+  ],
+  "temperature_assumption_c": 25,
+  "ageing_soh_feedback": false,
+  "test_status": "configuration written before final dispatch metrics; no claim of formal preregistration"
+}

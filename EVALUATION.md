@@ -1,5 +1,7 @@
 # Evaluation guide
 
+The later constructed Indian reference study evaluates 3,947 test hours and three SAC seeds per variant. See [reproduction steps](docs/india_research_execution.md) and [executed results](INDIA_RESULTS.md). The synthetic results and commands below remain available as the original engineering baseline. The expanded suite now has **30 tests**; the original suite described below had 18.
+
 Use the same audited data, battery configuration, initial SOC, chronology and physical action projection when comparing controllers. The default workflow is a synthetic engineering check; an empirical study additionally requires the controls in [docs/research_protocol.md](docs/research_protocol.md).
 
 ## Automated checks
@@ -11,7 +13,7 @@ uv run --frozen --extra dev --extra rl pytest -q
 uv run --frozen --extra dev --extra rl ruff check src tests scripts
 ```
 
-The full installed suite currently contains 18 tests. Tests cover battery energy conservation and constraints, Gymnasium behavior, data continuity, forecast causality, synchronized residual blocks, MPC dispatch, infeasibility-aware reserve quantiles, reserve recursion versus an independent LP oracle, rainflow counting, bootstrap behavior and SAC checkpoint reload. The SAC test skips when optional RL dependencies are absent; distinguish that outcome from a full pass.
+The original installed suite contained 18 tests; later India, published-ageing, capacity-feedback and greedy-oracle checks expand it to 30. Tests cover battery energy conservation and constraints, Gymnasium behavior, data continuity, forecast causality, synchronized residual blocks, MPC dispatch, infeasibility-aware reserve quantiles, reserve recursion versus an independent LP oracle, rainflow counting, bootstrap behavior and SAC checkpoint reload. The SAC test skips when optional RL dependencies are absent; distinguish that outcome from a full pass.
 
 ## End-to-end controller benchmark
 

@@ -1,30 +1,164 @@
-\documentclass{article}
-\usepackage{amsmath,graphicx}
-\title{Adaptive Energy-Reserve Control for Islanded Microgrids: Research Workbench}
-\author{Author details pending}
+\documentclass[10pt]{article}
+\usepackage[margin=0.85in]{geometry}
+\usepackage{amsmath,graphicx,booktabs,url}
+\title{Adaptive Reserve Dispatch in a Constructed Indian Microgrid:\\A Reproducible Negative-Result Study}
+\author{rishav76dev}
 \date{}
 \begin{document}
 \maketitle
 \begin{abstract}
-This is a manuscript scaffold, not a completed research submission. The accompanying
-software implements causal quantile forecasting, joint empirical scenarios,
-backward reserve estimation, physical battery projection, and dispatch baselines.
-No empirical improvement or novelty claim is made.
+We evaluate forecast-derived battery reserve guidance in a constructed islanded
+microgrid combining Jaisalmer weather with a scaled Indian national-demand proxy.
+The three-year input is split chronologically; a validation-selected design is
+frozen before 3,947 hours of final conventional dispatch. Rule-based and
+perfect-foresight control both yield 527.693 kWh unserved, while the proposed
+adaptive-reserve MPC yields 1,692.217 kWh. Marginal interval correction improves
+nominal 80\% interval coverage, but scenario tail coverage remains inadequate.
+A published-parameter LFP model is numerically checked against its reference
+implementation. These experiments do not establish an adaptive reliability or
+pack-lifetime advantage. Source provenance and cell-to-pack applicability remain
+limitations; this is an exploratory report, not a submission-ready field study.
 \end{abstract}
-\section{System model}
-Battery power is positive on discharge. The bus balance is
-$P_{\rm PV}+P_{\rm wind}+P_b+P_{\rm unmet}=P_{\rm load}+P_{\rm curtailed}$.
-\section{Adaptive reserve}
-For scenario $s$, backward minimum-energy recursion returns $E_{\rm req}^{(s)}$,
-including infinity for infeasibility. The target is the empirical
-$Q_{1-\alpha}(E_{\rm req})$ over all scenarios.
-\section{Experimental protocol}
-Document the dataset licence and provenance, chronological splits, frozen model
-and configuration hashes, seed selection, feasibility and statistical protocol.
-\section{Results pending}
-Synthetic engineering outputs are not evidence of real-world superiority.
-Replace this section only after completing the preregistered empirical study.
-\section{Limitations}
-The current ageing sensitivity model is unvalidated. Scenario recourse is two-stage,
-and uncertainty guarantees require further calibration and out-of-sample study.
+
+\section{Research question and status}
+The question is whether synchronized forecast-error trajectories provide useful
+energy-reserve guidance and a better reliability--degradation trade-off. An
+advantage is a hypothesis, not an assumption. The original synthetic results
+remain separately recorded in the repository. This report covers the later
+constructed Indian reference case and explicitly retains unfavorable outcomes.
+A comprehensive, independently verified novelty review is not claimed.
+
+\section{Data and provenance}
+We use NASA POWER hourly gridded irradiance, 2-m air temperature and 10-m wind
+at approximately $26.9157^\circ$ N, $70.9083^\circ$ E\cite{power}. The downloaded
+2020--2024 weather record contains 43,848 continuous hourly rows. Demand is a
+pinned secondary mirror of a dataset attributed to Kumar, Mukherjee and
+Kalita\cite{demand,mirror}. The mirror reports CC BY 4.0, national MW demand and
+IST timestamps. The primary Mendeley record was inaccessible through the
+execution proxy; these claims have not been independently verified against it.
+The resulting series must not be represented as measured local microgrid load.
+
+The experiment uses 2022--2024: 26,304 hourly observations. Six implausible demand
+readings are causally forward-filled, with runs limited to three hours. National
+demand is scaled to a 12 kW training mean. Hour-start IST demand intervals are
+aligned with UTC weather using equal overlap of neighboring weather hours under
+a piecewise-constant weather assumption. Simplified PV and wind conversions and
+training-only reference sizing are documented in the source audit. The 10-m wind
+curve is not a validated hub-height turbine model.
+
+The split is 60\% training, 15\% validation, 10\% calibration and 15\% test.
+All sizing and fixed-reserve selection use validation only. The final episode
+contains 3,947 hours; it covers part of one year rather than an independent
+multi-year site trial. Source hashes, code hashes and configuration are retained.
+
+\section{Physics and decision methods}
+Battery power is positive on discharge. The AC balance is
+\begin{equation}
+P_{PV}+P_{wind}+P_b+P_{unserved}=P_{load}+P_{curtailed}.
+\end{equation}
+The primary comparison uses constant 95\% charging/discharging efficiencies,
+SOC limits 0.1--0.9, initial SOC 0.5 and fixed SOH. Validation exploration found
+none of the initial modest-renewable designs adequate. The expanded search
+selected 200 kWh/50 kW and three times the training-derived renewable capacities,
+using a declared lexicographic choice rather than an economic optimum.
+
+The backward recursion returns minimum initial energy for each synchronized
+24-hour scenario. Power or energy infeasibility remains infinite; the empirical
+95th percentile is taken over all outcomes. Infeasible targets remain reported.
+The primary soft fallback is maximum usable energy; removing infeasible soft
+targets is a separately labelled counterfactual, not a feasibility claim.
+
+We compare rule based, deterministic MPC, validation-tuned fixed reserve,
+adaptive reserve, independent-residual reserve, and scenario MPC. Scenario MPC
+shares its first action but permits optimistic scenario-specific later recourse;
+it is not a fully non-anticipative multistage tree. Perfect foresight is a
+non-deployable EENS-only LP over the complete episode.
+
+\section{Forecast uncertainty}
+Nine horizon-aware LightGBM quantile models produce P10/P50/P90 estimates.
+An interval-widening correction is fitted on early validation and reported on
+later data. On the final reference test, pooled raw nominal-80\% coverage is
+74.66\%, versus 84.11\% after correction. This is empirical coverage under
+temporal dependence, not an exchangeable conformal guarantee.
+
+The median-residual sampler uses 109 completed joint daily blocks. Its one-sided
+95\% net-energy bound covers only 75.61\% of the evaluated observed 24-hour net
+energies. Correcting marginal intervals does not recalibrate this sampler.
+The initial reserve is infeasible at 34.08\% of test origins. Residual sampling is
+not conditioned on origin hour, and the current sampler does not impose an
+astronomical PV night mask; these are further physical/statistical limitations.
+
+\section{Ageing and learning}
+A separate evaluator implements the BLAST-Lite 250 Ah LFP-Gr model\cite{blast}.
+The published-model parameters and state updates are checked numerically against
+a pinned upstream reference. The assumed battery temperature is 25$^\circ$C;
+35$^\circ$C is a sensitivity case. Daily cycle depths outside the experimental
+range are extrapolations. Numerical agreement with source code is not empirical
+validation of the intended pack, and model capacity loss is not a measured
+lifetime extension.
+
+The four SAC variants use identical physics and chronology, three seeds and
+10,000/30,000-step candidate budgets. Checkpoints are selected by validation EENS,
+then modelled damage. The reward uses a published-model-derived hourly damage
+proxy; daily offline ageing is reported separately. Ageing states are included
+in the observation. The constrained variant uses an episode-wise dual penalty;
+physical projection remains hard, but the learned reliability target is not
+guaranteed. The nested policy-training suffix is only part of the outer training
+period and does not cover all seasons. Budget comparisons do not establish
+convergence. Conventional test outcomes were available during later reporting;
+RL checkpoint selection uses validation only.
+
+\section{Results and uncertainty}
+\begin{table}[ht]
+\centering\scriptsize
+\resizebox{\textwidth}{!}{\input{tables/india_comparison.tex}}
+\caption{Frozen conventional comparison and validation-selected SAC checkpoints.
+Capacity loss is a model output, not pack-validated degradation.}
+\end{table}
+
+Rule-based energy LPSP is 1.0554\%, narrowly missing the provisional 1\% target;
+perfect foresight gives the same EENS. Thus the target is infeasible even under
+future knowledge for this selected design and realized episode. No final-test
+retuning is performed to conceal this outcome.
+
+Adaptive-minus-fixed mean hourly unserved-power difference is 0.07456 kW.
+A paired circular bootstrap gives a 95\% interval [0.00879, 0.13231] kW for
+24-hour blocks, but [--0.02759, 0.15614] kW for 168-hour blocks. The latter spans
+zero; conclusions depend on temporal dependence assumptions. Across the initial
+conventional controllers, throughput and published-model damage have weak rank
+association. Serving less load is not evidence of a degradation benefit.
+
+\begin{figure}[ht]
+\centering
+\includegraphics[width=.95\textwidth]{figures/reliability_degradation.png}
+\caption{Reliability versus published-model capacity loss. Comparisons at unequal
+reliability cannot establish an adaptive ageing advantage.}
+\end{figure}
+
+A post-hoc coupled-capacity sensitivity of rule-based dispatch gives 599.586 kWh
+unserved at 25$^\circ$C and 642.530 kWh at 35$^\circ$C, with modelled final SOH
+0.98699 and 0.98085. Capacity is updated daily, with removed stored energy recorded
+separately. This is not the primary fixed-capacity comparison or an RL claim.
+
+\section{Structural interpretation and limitations}
+For the implemented single-bus, fixed-efficiency, fixed-capacity model with
+inelastic demand, unweighted EENS and a minimum-only terminal constraint,
+work-conserving greedy dispatch is EENS-optimal. Express stored energy in
+deliverable AC units: surplus is an arrival to a bounded buffer and served demand
+is a departure. Deferring feasible service cannot increase total departures;
+serving it earlier frees room for intervening arrivals. Admitting unused surplus
+has no holding cost in this objective. Repeated exchanges produce a greedy
+schedule without reducing total served energy. The repository provides the full
+scope statement and randomized LP checks.
+
+This does not establish greedy optimality for ageing, critical-load weighting,
+capacity fade or temperature-dependent physics. A future contribution must
+demonstrate damage reductions at matched reliability or justify different
+application constraints. Source-primary verification, seasonal scenario
+calibration, pack-level validation and robust policy convergence remain necessary
+before a research submission. The current result is a reproducible negative
+finding, not demonstrated adaptive superiority.
+
+\bibliographystyle{plain}
+\bibliography{references}
 \end{document}

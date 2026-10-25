@@ -1,6 +1,6 @@
 # India case-study data and experiment plan
 
-Geographic decision: India, as requested. Status: five years of NASA POWER weather have now been downloaded and audited; suitable Indian hourly demand is still required. No Indian historical dispatch experiment has been evaluated yet. See [india_workflow.md](india_workflow.md) for implemented commands and executed status. All existing recorded results remain the October 24 synthetic baseline.
+Geographic decision: India, as requested. Status: five years of NASA POWER weather have now been downloaded and audited; a scaled national-demand mirror now supports an executed constructed reference experiment. Primary-source verification and a local measured demand series remain outstanding. See [../INDIA_RESULTS.md](../INDIA_RESULTS.md). See [india_workflow.md](india_workflow.md) for implemented commands and executed status. All existing recorded results remain the October 24 synthetic baseline.
 
 ## Reference case
 

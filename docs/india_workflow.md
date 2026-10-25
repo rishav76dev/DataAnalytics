@@ -1,5 +1,7 @@
 # Executable India research workflow
 
+Historical workflow note: a later national-demand-mirror reference experiment is now executed. See [india_research_execution.md](india_research_execution.md) and [../INDIA_RESULTS.md](../INDIA_RESULTS.md) for its current status. The commands below retain the stricter path for independently verified local-demand metadata.
+
 Implementation status: acquisition, alignment, adequacy, interval-correction and reserve-validation commands are implemented. Five complete years of Jaisalmer weather (2020–2024, 43,848 hourly samples) have now been downloaded and audited. An Indian hourly demand series is still missing, so no Indian dispatch results have been generated. Existing synthetic results remain unchanged. Published LFP model validation and extended SAC experiments remain gated on evidence, not represented as complete.
 
 Run from the repository root after the installation in [SETUP.md](../SETUP.md). No new dependencies beyond the frozen environment are required.

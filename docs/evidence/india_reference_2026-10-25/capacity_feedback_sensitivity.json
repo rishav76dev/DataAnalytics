@@ -1,0 +1,37 @@
+{
+  "status": "post_hoc_sensitivity_not_policy_selection",
+  "results": {
+    "25.0": {
+      "eens_kwh": 599.5860247634754,
+      "lpsp_energy": 0.011991353856117309,
+      "loss_of_load_hours": 111.0,
+      "curtailment_kwh": 71691.58367949449,
+      "throughput_kwh": 39762.44918080798,
+      "demand_kwh": 50001.52876462741,
+      "model": "published BLAST-Lite LFP-Gr 250Ah capacity-feedback sensitivity",
+      "temperature_c": 25.0,
+      "final_soh": 0.9869885042147898,
+      "capacity_fade_energy_loss_kwh": 2.311423982256642,
+      "calendar_loss_fraction": 0.008512336870193591,
+      "cycling_loss_fraction": 0.004499158915016648,
+      "applicability": "cell parameter model, not pack validated; national proxy case; conservative constant battery temperature",
+      "state_update": "SOC preserved as capacity shrinks; unavailable stored energy recorded separately"
+    },
+    "35.0": {
+      "eens_kwh": 642.5299066348164,
+      "lpsp_energy": 0.012850205233911997,
+      "loss_of_load_hours": 118.0,
+      "curtailment_kwh": 71739.17927523737,
+      "throughput_kwh": 39672.029278671886,
+      "demand_kwh": 50001.52876462741,
+      "model": "published BLAST-Lite LFP-Gr 250Ah capacity-feedback sensitivity",
+      "temperature_c": 35.0,
+      "final_soh": 0.9808512414382399,
+      "capacity_fade_energy_loss_kwh": 3.4035836713548306,
+      "calendar_loss_fraction": 0.015610546020955882,
+      "cycling_loss_fraction": 0.003538212540804248,
+      "applicability": "cell parameter model, not pack validated; national proxy case; conservative constant battery temperature",
+      "state_update": "SOC preserved as capacity shrinks; unavailable stored energy recorded separately"
+    }
+  }
+}

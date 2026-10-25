@@ -1,0 +1,1651 @@
+{
+  "origin_count": 164,
+  "historical_blocks": 109,
+  "coverage_actual_net_energy_below_scenario_p95": 0.7560975609756098,
+  "finite_target_origins": 75,
+  "finite_target_covers_actual_fraction": 0.7466666666666667,
+  "actual_energy_or_power_infeasible_origins": 52,
+  "warning": "Finite-target subset coverage is conditional, not a reliability guarantee; all infeasible cases retained in records",
+  "records": [
+    {
+      "origin": 22357,
+      "actual_net_energy_kwh": -394.0737023415784,
+      "scenario_net_energy_p95_kwh": -546.7682164219609,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 22381,
+      "actual_net_energy_kwh": -529.0423929339037,
+      "scenario_net_energy_p95_kwh": -362.75214889100926,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 22405,
+      "actual_net_energy_kwh": -415.9037648005507,
+      "scenario_net_energy_p95_kwh": -396.2729326692381,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22429,
+      "actual_net_energy_kwh": -677.8257580883999,
+      "scenario_net_energy_p95_kwh": -301.77400203039406,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22453,
+      "actual_net_energy_kwh": -859.9466433293778,
+      "scenario_net_energy_p95_kwh": -424.10417874394875,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 22477,
+      "actual_net_energy_kwh": -700.6477011167308,
+      "scenario_net_energy_p95_kwh": -435.1511037336344,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22501,
+      "actual_net_energy_kwh": -1018.3117528171308,
+      "scenario_net_energy_p95_kwh": -424.7613108999268,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22525,
+      "actual_net_energy_kwh": -785.9970681918555,
+      "scenario_net_energy_p95_kwh": -672.800073078324,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22549,
+      "actual_net_energy_kwh": -319.5516534971561,
+      "scenario_net_energy_p95_kwh": -313.88596729189305,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 22573,
+      "actual_net_energy_kwh": -347.80034275510684,
+      "scenario_net_energy_p95_kwh": -206.1068048863562,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 22597,
+      "actual_net_energy_kwh": -679.8856386159841,
+      "scenario_net_energy_p95_kwh": -485.7821327920492,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22621,
+      "actual_net_energy_kwh": -1173.2315528569325,
+      "scenario_net_energy_p95_kwh": -461.3739118737276,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22645,
+      "actual_net_energy_kwh": -477.65546757987835,
+      "scenario_net_energy_p95_kwh": -593.22683924687,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22669,
+      "actual_net_energy_kwh": -53.09642163327967,
+      "scenario_net_energy_p95_kwh": -265.6124158415528,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 23.66054861558323,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 22693,
+      "actual_net_energy_kwh": 6.191304868416674,
+      "scenario_net_energy_p95_kwh": -248.57645318972357,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 22717,
+      "actual_net_energy_kwh": -108.52265338841035,
+      "scenario_net_energy_p95_kwh": -254.17526040545656,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 22741,
+      "actual_net_energy_kwh": -399.13072554163136,
+      "scenario_net_energy_p95_kwh": -165.99231895388334,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 72.26527685590678,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 22765,
+      "actual_net_energy_kwh": -898.101010597348,
+      "scenario_net_energy_p95_kwh": -605.0990776405868,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22789,
+      "actual_net_energy_kwh": -828.4762661031957,
+      "scenario_net_energy_p95_kwh": -949.9924630999387,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22813,
+      "actual_net_energy_kwh": -676.6511633282731,
+      "scenario_net_energy_p95_kwh": -198.0983993624489,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22837,
+      "actual_net_energy_kwh": -920.2851903129779,
+      "scenario_net_energy_p95_kwh": -303.69101607156347,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22861,
+      "actual_net_energy_kwh": -966.976444592907,
+      "scenario_net_energy_p95_kwh": -335.8758523977816,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22885,
+      "actual_net_energy_kwh": -859.8442696202055,
+      "scenario_net_energy_p95_kwh": -450.15028463923113,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22909,
+      "actual_net_energy_kwh": -555.6126410505747,
+      "scenario_net_energy_p95_kwh": -165.06780910921728,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 22933,
+      "actual_net_energy_kwh": -426.0840762365244,
+      "scenario_net_energy_p95_kwh": -309.1301864354898,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22957,
+      "actual_net_energy_kwh": -518.6941711932446,
+      "scenario_net_energy_p95_kwh": -331.4498551392937,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 22981,
+      "actual_net_energy_kwh": -741.0051149076477,
+      "scenario_net_energy_p95_kwh": -458.82700368849316,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23005,
+      "actual_net_energy_kwh": -245.14347344740938,
+      "scenario_net_energy_p95_kwh": -390.13004235887746,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 27.964225652409112,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 23029,
+      "actual_net_energy_kwh": -1278.1239151421191,
+      "scenario_net_energy_p95_kwh": -904.1261862822839,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23053,
+      "actual_net_energy_kwh": -863.6846527967267,
+      "scenario_net_energy_p95_kwh": -916.4507200692569,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23077,
+      "actual_net_energy_kwh": -766.4627609195243,
+      "scenario_net_energy_p95_kwh": -542.3641074711627,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23101,
+      "actual_net_energy_kwh": -825.1624118752925,
+      "scenario_net_energy_p95_kwh": -583.0338535805126,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23125,
+      "actual_net_energy_kwh": -646.7992271097783,
+      "scenario_net_energy_p95_kwh": -693.4267693556397,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23149,
+      "actual_net_energy_kwh": -561.4441564413929,
+      "scenario_net_energy_p95_kwh": -518.8156859203289,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23173,
+      "actual_net_energy_kwh": -456.6564514997382,
+      "scenario_net_energy_p95_kwh": -239.53898475513105,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 23197,
+      "actual_net_energy_kwh": -336.251122474576,
+      "scenario_net_energy_p95_kwh": -311.64665050188285,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23221,
+      "actual_net_energy_kwh": -448.9440556282742,
+      "scenario_net_energy_p95_kwh": -336.2801045610479,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23245,
+      "actual_net_energy_kwh": -966.6967609049121,
+      "scenario_net_energy_p95_kwh": -743.0455830308692,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23269,
+      "actual_net_energy_kwh": -2211.429791370248,
+      "scenario_net_energy_p95_kwh": -1093.7315258219467,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23293,
+      "actual_net_energy_kwh": -554.7464381862667,
+      "scenario_net_energy_p95_kwh": -1335.450977394569,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23317,
+      "actual_net_energy_kwh": -1029.8036886280738,
+      "scenario_net_energy_p95_kwh": -815.3148964344291,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23341,
+      "actual_net_energy_kwh": -550.4258006749618,
+      "scenario_net_energy_p95_kwh": -991.0750667549801,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23365,
+      "actual_net_energy_kwh": -471.23770209033523,
+      "scenario_net_energy_p95_kwh": -299.22550374696914,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23389,
+      "actual_net_energy_kwh": -415.712427112565,
+      "scenario_net_energy_p95_kwh": -407.3617508725505,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23413,
+      "actual_net_energy_kwh": -223.78088569446695,
+      "scenario_net_energy_p95_kwh": -273.53538698750606,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23437,
+      "actual_net_energy_kwh": 57.97910846052116,
+      "scenario_net_energy_p95_kwh": -175.66089079754104,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23461,
+      "actual_net_energy_kwh": -353.11422179704334,
+      "scenario_net_energy_p95_kwh": -218.56861587521232,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23485,
+      "actual_net_energy_kwh": -537.8104262708135,
+      "scenario_net_energy_p95_kwh": -328.6995480908216,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23509,
+      "actual_net_energy_kwh": -581.8019157894306,
+      "scenario_net_energy_p95_kwh": -460.50704244275244,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23533,
+      "actual_net_energy_kwh": -550.0148033171712,
+      "scenario_net_energy_p95_kwh": -443.8937059847726,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23557,
+      "actual_net_energy_kwh": -566.1492245145778,
+      "scenario_net_energy_p95_kwh": -416.84790353524454,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23581,
+      "actual_net_energy_kwh": -606.3386681044241,
+      "scenario_net_energy_p95_kwh": -330.56799712084864,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23605,
+      "actual_net_energy_kwh": -544.7072688440328,
+      "scenario_net_energy_p95_kwh": -205.55100759230623,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23629,
+      "actual_net_energy_kwh": -604.7164689386632,
+      "scenario_net_energy_p95_kwh": -421.4239373147112,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23653,
+      "actual_net_energy_kwh": -1407.2926070754083,
+      "scenario_net_energy_p95_kwh": -515.8919840737001,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23677,
+      "actual_net_energy_kwh": -1273.0061338391697,
+      "scenario_net_energy_p95_kwh": -1232.8404924209894,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23701,
+      "actual_net_energy_kwh": -885.5610108511135,
+      "scenario_net_energy_p95_kwh": -892.075854098226,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23725,
+      "actual_net_energy_kwh": -640.6788988198709,
+      "scenario_net_energy_p95_kwh": -511.9709654751866,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23749,
+      "actual_net_energy_kwh": -634.8482067607945,
+      "scenario_net_energy_p95_kwh": -513.0206688156018,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23773,
+      "actual_net_energy_kwh": -513.4676226858792,
+      "scenario_net_energy_p95_kwh": -621.3395887713169,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23797,
+      "actual_net_energy_kwh": -448.64219827419697,
+      "scenario_net_energy_p95_kwh": -438.4203869803414,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23821,
+      "actual_net_energy_kwh": -455.9662769658654,
+      "scenario_net_energy_p95_kwh": -545.92823738657,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 23845,
+      "actual_net_energy_kwh": -373.4845021919213,
+      "scenario_net_energy_p95_kwh": -414.61210837582524,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23869,
+      "actual_net_energy_kwh": -468.4958969676911,
+      "scenario_net_energy_p95_kwh": -349.6639154999469,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23893,
+      "actual_net_energy_kwh": -471.58762501866283,
+      "scenario_net_energy_p95_kwh": -440.6032733518231,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 23917,
+      "actual_net_energy_kwh": -407.126912567364,
+      "scenario_net_energy_p95_kwh": -454.11274060895846,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 23941,
+      "actual_net_energy_kwh": -408.27721089064454,
+      "scenario_net_energy_p95_kwh": -369.24920345080716,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23965,
+      "actual_net_energy_kwh": -345.76983373063007,
+      "scenario_net_energy_p95_kwh": -362.4232267614705,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 23989,
+      "actual_net_energy_kwh": -375.28147672679904,
+      "scenario_net_energy_p95_kwh": -344.0318364008698,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24013,
+      "actual_net_energy_kwh": -453.8508660772723,
+      "scenario_net_energy_p95_kwh": -343.1017428270163,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24037,
+      "actual_net_energy_kwh": -548.6833757635952,
+      "scenario_net_energy_p95_kwh": -352.93566617390616,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24061,
+      "actual_net_energy_kwh": -378.57539878621003,
+      "scenario_net_energy_p95_kwh": -372.6229384544167,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24085,
+      "actual_net_energy_kwh": -545.239281677235,
+      "scenario_net_energy_p95_kwh": -331.89193232455966,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24109,
+      "actual_net_energy_kwh": -706.0087310966935,
+      "scenario_net_energy_p95_kwh": -573.9968090122112,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 24133,
+      "actual_net_energy_kwh": -1015.3701410015117,
+      "scenario_net_energy_p95_kwh": -519.1696007696132,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 24157,
+      "actual_net_energy_kwh": -878.4330835619722,
+      "scenario_net_energy_p95_kwh": -823.1164568564773,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 24181,
+      "actual_net_energy_kwh": -779.1737684422264,
+      "scenario_net_energy_p95_kwh": -709.5695137019741,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 24205,
+      "actual_net_energy_kwh": -506.8381829522682,
+      "scenario_net_energy_p95_kwh": -536.4292660820869,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 24229,
+      "actual_net_energy_kwh": -378.6915268873362,
+      "scenario_net_energy_p95_kwh": -362.36306952114523,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24253,
+      "actual_net_energy_kwh": -336.6819063466357,
+      "scenario_net_energy_p95_kwh": -326.8892469673812,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24277,
+      "actual_net_energy_kwh": -212.11094516750705,
+      "scenario_net_energy_p95_kwh": -292.65377789374975,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24301,
+      "actual_net_energy_kwh": -316.06916426105687,
+      "scenario_net_energy_p95_kwh": -281.65280388519267,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24325,
+      "actual_net_energy_kwh": -340.66219943923306,
+      "scenario_net_energy_p95_kwh": -288.92538436888447,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24349,
+      "actual_net_energy_kwh": -380.2680013689266,
+      "scenario_net_energy_p95_kwh": -334.65686437723195,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24373,
+      "actual_net_energy_kwh": -323.32393999900097,
+      "scenario_net_energy_p95_kwh": -353.76389124746026,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24397,
+      "actual_net_energy_kwh": -254.38977313659257,
+      "scenario_net_energy_p95_kwh": -302.71083615195505,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 27.282317247968606,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24421,
+      "actual_net_energy_kwh": -224.67602451274942,
+      "scenario_net_energy_p95_kwh": -236.3680884461927,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24445,
+      "actual_net_energy_kwh": -284.85278068904415,
+      "scenario_net_energy_p95_kwh": -203.5381100200777,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24469,
+      "actual_net_energy_kwh": -231.87207541074588,
+      "scenario_net_energy_p95_kwh": -261.25442615036826,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24493,
+      "actual_net_energy_kwh": -316.904378200253,
+      "scenario_net_energy_p95_kwh": -268.143567880926,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24517,
+      "actual_net_energy_kwh": -306.62803716046716,
+      "scenario_net_energy_p95_kwh": -324.29379823967804,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24541,
+      "actual_net_energy_kwh": -300.1758938173546,
+      "scenario_net_energy_p95_kwh": -272.4971998669896,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24565,
+      "actual_net_energy_kwh": -264.6146033014488,
+      "scenario_net_energy_p95_kwh": -258.25724481521456,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24589,
+      "actual_net_energy_kwh": -200.18651928108474,
+      "scenario_net_energy_p95_kwh": -201.4249613404112,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24613,
+      "actual_net_energy_kwh": -280.1546278797612,
+      "scenario_net_energy_p95_kwh": -241.2762516229742,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24637,
+      "actual_net_energy_kwh": -321.35227691802766,
+      "scenario_net_energy_p95_kwh": -235.83503757923714,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24661,
+      "actual_net_energy_kwh": -331.67425977945413,
+      "scenario_net_energy_p95_kwh": -295.87159127833854,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24685,
+      "actual_net_energy_kwh": -336.0977281211542,
+      "scenario_net_energy_p95_kwh": -289.91050690858435,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24709,
+      "actual_net_energy_kwh": -348.9120956890605,
+      "scenario_net_energy_p95_kwh": -312.1820094042424,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 24733,
+      "actual_net_energy_kwh": -345.39566325211,
+      "scenario_net_energy_p95_kwh": -299.7453001229431,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 24757,
+      "actual_net_energy_kwh": -329.5993239187771,
+      "scenario_net_energy_p95_kwh": -264.31732674728005,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 24781,
+      "actual_net_energy_kwh": -342.9439379282443,
+      "scenario_net_energy_p95_kwh": -286.99842689448144,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24805,
+      "actual_net_energy_kwh": -334.9275962594859,
+      "scenario_net_energy_p95_kwh": -321.2583220780321,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 24829,
+      "actual_net_energy_kwh": -349.3682744545123,
+      "scenario_net_energy_p95_kwh": -308.2853594258901,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24853,
+      "actual_net_energy_kwh": -394.83610190532283,
+      "scenario_net_energy_p95_kwh": -308.8444247894338,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 24877,
+      "actual_net_energy_kwh": -388.435852514564,
+      "scenario_net_energy_p95_kwh": -317.8745209956634,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 24901,
+      "actual_net_energy_kwh": -342.42248505764246,
+      "scenario_net_energy_p95_kwh": -295.1978054785419,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 24925,
+      "actual_net_energy_kwh": -341.4010744962809,
+      "scenario_net_energy_p95_kwh": -270.6509178416694,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24949,
+      "actual_net_energy_kwh": -294.6465106279911,
+      "scenario_net_energy_p95_kwh": -291.66706767205187,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 24973,
+      "actual_net_energy_kwh": -298.7704256780174,
+      "scenario_net_energy_p95_kwh": -247.70056797578602,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 24997,
+      "actual_net_energy_kwh": -340.96983628319,
+      "scenario_net_energy_p95_kwh": -298.52633050383656,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 25021,
+      "actual_net_energy_kwh": -322.3362889048143,
+      "scenario_net_energy_p95_kwh": -302.1718233374394,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 25.359326234610208,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 25045,
+      "actual_net_energy_kwh": -305.3437960071133,
+      "scenario_net_energy_p95_kwh": -248.03000811104843,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 28.14086899052009,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25069,
+      "actual_net_energy_kwh": -305.60466084621976,
+      "scenario_net_energy_p95_kwh": -260.49560902293933,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 28.163185945583365,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25093,
+      "actual_net_energy_kwh": -287.73269170411294,
+      "scenario_net_energy_p95_kwh": -286.6605542755209,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 25117,
+      "actual_net_energy_kwh": -264.88840927018384,
+      "scenario_net_energy_p95_kwh": -244.49469191204804,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25141,
+      "actual_net_energy_kwh": -262.1054441825546,
+      "scenario_net_energy_p95_kwh": -238.63680109435825,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25165,
+      "actual_net_energy_kwh": -217.09662278134562,
+      "scenario_net_energy_p95_kwh": -226.7195773122739,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25189,
+      "actual_net_energy_kwh": -185.6242410864184,
+      "scenario_net_energy_p95_kwh": -214.35506037181088,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25213,
+      "actual_net_energy_kwh": -254.56958202019078,
+      "scenario_net_energy_p95_kwh": -232.3463548975052,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 38.289964439024175,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 25237,
+      "actual_net_energy_kwh": -279.70822283843574,
+      "scenario_net_energy_p95_kwh": -253.75596552776332,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25261,
+      "actual_net_energy_kwh": -274.7309856368505,
+      "scenario_net_energy_p95_kwh": -255.6510543077393,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 33.86599313152257,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25285,
+      "actual_net_energy_kwh": -279.8770738490219,
+      "scenario_net_energy_p95_kwh": -250.4720113948011,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 29.042856196375425,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25309,
+      "actual_net_energy_kwh": -290.73893030825803,
+      "scenario_net_energy_p95_kwh": -246.02163453106675,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 29.00833527189822,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25333,
+      "actual_net_energy_kwh": -288.12711648780765,
+      "scenario_net_energy_p95_kwh": -223.43267859104506,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 32.29615845032488,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25357,
+      "actual_net_energy_kwh": -264.90970765750984,
+      "scenario_net_energy_p95_kwh": -217.23653096316485,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 38.8164671387907,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25381,
+      "actual_net_energy_kwh": -241.30541707170624,
+      "scenario_net_energy_p95_kwh": -229.98645326982427,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 37.13846727763848,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 25405,
+      "actual_net_energy_kwh": -220.43445686568217,
+      "scenario_net_energy_p95_kwh": -224.20709801683586,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 32.875002118612926,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25429,
+      "actual_net_energy_kwh": -221.32913039796074,
+      "scenario_net_energy_p95_kwh": -262.9407696929688,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 25453,
+      "actual_net_energy_kwh": -229.43468107521738,
+      "scenario_net_energy_p95_kwh": -268.714904624224,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 35.578091053228604,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 25477,
+      "actual_net_energy_kwh": -242.03426491195597,
+      "scenario_net_energy_p95_kwh": -232.89623769944737,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 30.87951004958039,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25501,
+      "actual_net_energy_kwh": -277.2616544784411,
+      "scenario_net_energy_p95_kwh": -232.48427828846195,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25525,
+      "actual_net_energy_kwh": -261.80367543943396,
+      "scenario_net_energy_p95_kwh": -216.7761018811791,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 27.175046951218775,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25549,
+      "actual_net_energy_kwh": -240.34205603584013,
+      "scenario_net_energy_p95_kwh": -242.1201180571908,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 30.194335015029964,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 25573,
+      "actual_net_energy_kwh": -230.4718747173,
+      "scenario_net_energy_p95_kwh": -218.53659539409307,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 28.18691671186282,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25597,
+      "actual_net_energy_kwh": -249.47601140784724,
+      "scenario_net_energy_p95_kwh": -220.4492286521418,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25621,
+      "actual_net_energy_kwh": -335.4952706229976,
+      "scenario_net_energy_p95_kwh": -204.6578641501312,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25645,
+      "actual_net_energy_kwh": -227.00072588200322,
+      "scenario_net_energy_p95_kwh": -207.13383089886003,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25669,
+      "actual_net_energy_kwh": -280.01288332738176,
+      "scenario_net_energy_p95_kwh": -206.24534266587972,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25693,
+      "actual_net_energy_kwh": -302.5267364213721,
+      "scenario_net_energy_p95_kwh": -239.1408755565105,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25717,
+      "actual_net_energy_kwh": -560.8316635569635,
+      "scenario_net_energy_p95_kwh": -219.40985652634868,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25741,
+      "actual_net_energy_kwh": -505.33364252574995,
+      "scenario_net_energy_p95_kwh": -902.3197368206618,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 25765,
+      "actual_net_energy_kwh": -265.5590771917882,
+      "scenario_net_energy_p95_kwh": -228.90883515296548,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25789,
+      "actual_net_energy_kwh": -253.979859924212,
+      "scenario_net_energy_p95_kwh": -204.426300724656,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": false,
+      "actual_requirement_kwh": null,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25813,
+      "actual_net_energy_kwh": -290.7658396851644,
+      "scenario_net_energy_p95_kwh": -214.97787359876264,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25837,
+      "actual_net_energy_kwh": -362.06948672714043,
+      "scenario_net_energy_p95_kwh": -217.75260255834394,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25861,
+      "actual_net_energy_kwh": -314.51086879518255,
+      "scenario_net_energy_p95_kwh": -277.60395769045476,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 25885,
+      "actual_net_energy_kwh": -291.51498707167457,
+      "scenario_net_energy_p95_kwh": -235.00143950308913,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 23.167951768922237,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25909,
+      "actual_net_energy_kwh": -301.964950198574,
+      "scenario_net_energy_p95_kwh": -253.3208592076021,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25933,
+      "actual_net_energy_kwh": -274.3315417383011,
+      "scenario_net_energy_p95_kwh": -216.81039536694053,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25957,
+      "actual_net_energy_kwh": -318.3572417023504,
+      "scenario_net_energy_p95_kwh": -219.1770110310056,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 25981,
+      "actual_net_energy_kwh": -268.6035234306769,
+      "scenario_net_energy_p95_kwh": -249.4406180842696,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 26005,
+      "actual_net_energy_kwh": -299.8430627096792,
+      "scenario_net_energy_p95_kwh": -239.27258324582363,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 26029,
+      "actual_net_energy_kwh": -307.13201272620574,
+      "scenario_net_energy_p95_kwh": -392.5990607425739,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 26053,
+      "actual_net_energy_kwh": -146.6898171196438,
+      "scenario_net_energy_p95_kwh": -294.0305626013609,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 31.670039749701772,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 26077,
+      "actual_net_energy_kwh": -89.16308577328189,
+      "scenario_net_energy_p95_kwh": -195.45771115948855,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 72.2254795024833,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 26101,
+      "actual_net_energy_kwh": -278.08116650804993,
+      "scenario_net_energy_p95_kwh": -258.4808979780931,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 26125,
+      "actual_net_energy_kwh": -185.48603014147216,
+      "scenario_net_energy_p95_kwh": -370.09867105607816,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 26149,
+      "actual_net_energy_kwh": -117.29305279609304,
+      "scenario_net_energy_p95_kwh": -207.45792630863838,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 29.542326265275676,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 26173,
+      "actual_net_energy_kwh": -100.7485095086719,
+      "scenario_net_energy_p95_kwh": -129.7298573528481,
+      "actual_net_energy_below_p95": false,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 75.33384522009548,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 26197,
+      "actual_net_energy_kwh": -192.75370162149193,
+      "scenario_net_energy_p95_kwh": -178.3170088527549,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 60.5896020242145,
+      "finite_target_covers_actual": false
+    },
+    {
+      "origin": 26221,
+      "actual_net_energy_kwh": -332.71952885944904,
+      "scenario_net_energy_p95_kwh": -193.63279939619193,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    },
+    {
+      "origin": 26245,
+      "actual_net_energy_kwh": -301.5320997657459,
+      "scenario_net_energy_p95_kwh": -229.72877733084465,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": true,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": true
+    },
+    {
+      "origin": 26269,
+      "actual_net_energy_kwh": -267.65491760220436,
+      "scenario_net_energy_p95_kwh": -154.46476239435154,
+      "actual_net_energy_below_p95": true,
+      "reserve_target_finite": false,
+      "actual_reserve_feasible": true,
+      "actual_requirement_kwh": 20.0,
+      "finite_target_covers_actual": null
+    }
+  ]
+}

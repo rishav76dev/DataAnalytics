@@ -1,5 +1,7 @@
 # Setup guide
 
+For the completed constructed Indian reference experiment, follow [india_research_execution.md](docs/india_research_execution.md) after installing dependencies below. Its inputs, source limitations and outcomes are in [INDIA_RESULTS.md](INDIA_RESULTS.md). The default `microgrid demo` remains synthetic.
+
 This project runs hourly islanded microgrid simulations, forecasting, reserve estimation, optimization baselines, and optional SAC training. No GPU, API keys, or background services are required for the synthetic workflow.
 
 ## Prerequisites

@@ -2,9 +2,13 @@
 
 A runnable Python research implementation for islanded **PV + wind + LFP-style battery + demand** dispatch. Implements physical simulation, conventional optimization, quantile forecasting, joint empirical scenarios, a validated reserve recursion, and SAC training/evaluation entry points.
 
-**Research status:** synthetic engineering demonstration. This repository does not yet establish a novel method, calibrated LFP lifetime, or a publishable advantage. The demo deliberately reports infeasibility and negative results. No public dataset was specified in the supplied plan; no dataset licence or provenance has been invented.
+**Research status:** the original synthetic demonstration is preserved. A later **2022–2024 constructed Indian reference study** has been executed, using Jaisalmer weather and a scaled national-demand mirror, with a 3,947-hour test and three SAC seeds per variant. Its negative findings, source-confidence limits and published-model ageing results are in [INDIA_RESULTS.md](INDIA_RESULTS.md). The adaptive advantage remains unproven; this is not a measured local microgrid or a validated pack-lifetime claim.
 
 ## Guides
+
+- [Indian reference-case results and research decision](INDIA_RESULTS.md)
+- [Reproduce the completed computational study](docs/india_research_execution.md)
+- [Why greedy is already EENS-optimal under the current assumptions](docs/greedy_reliability_limit.md)
 
 - [Setup and installation](SETUP.md)
 - [Evaluation and reproduction](EVALUATION.md)
@@ -23,6 +27,8 @@ uv sync --frozen --extra dev --extra rl
 uv run --frozen --extra dev --extra rl pytest -q
 uv run --frozen --extra dev --extra rl microgrid demo --output outputs/demo
 ```
+
+The following `demo` command remains the original synthetic workflow. For historical-weather reference experiments use [the research reproduction commands](docs/india_research_execution.md).
 
 The default demo generates 2,160 synthetic hours, trains nine LightGBM quantile models, calibrates joint residual trajectories, and evaluates 72 held-out dispatch hours with 100 scenarios per hourly origin. It requires no credentials, external services, GPU, or data download. CPU-only PyTorch is selected explicitly. For a smaller non-RL installation omit `--extra rl`.
 

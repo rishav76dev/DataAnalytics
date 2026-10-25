@@ -1,0 +1,10 @@
+{
+  "repository": "https://github.com/NREL/BLAST-Lite",
+  "commit": "b093495b47dc40dd96dba865d91f553619501e94",
+  "source_files": {
+    "blast/models/lfp_gr_250AhPrismatic_2019.py": "b145c45a5a7cbb76a4a3d6c0a76b85f127f1a45a5570ecf4b5284bf089bdacf8",
+    "blast/models/degradation_model.py": "65a1c013a0b9cc91ff5881e195df6c1723fe05b8b84a6bb0b457969696ec10ab",
+    "LICENSE": "89e665ed7949c1c60c96134ba4738c8efa6c8f0a6d533ed4761b6a34b8fc1f09"
+  },
+  "modifications": "Reference LFP class: np.trapz -> np.trapezoid for numpy>=2; reference base: retain only two static methods. No parameter changes. Trailing whitespace stripped; coefficients and calculations unchanged."
+}

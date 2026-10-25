@@ -1,0 +1,29 @@
+{
+  "budgets": [
+    10000,
+    30000
+  ],
+  "seeds": [
+    42,
+    43,
+    44
+  ],
+  "variants": [
+    "vanilla",
+    "fixed",
+    "adaptive",
+    "constrained"
+  ],
+  "fit_end": 9469,
+  "residual_stop": 12625,
+  "policy_training_start": 12625,
+  "policy_training_stop": 15782,
+  "validation": [
+    15782,
+    19727
+  ],
+  "reward": "published-model hourly damage proxy + EENS + reserve; fixed25C; no capacity fade feedback",
+  "observations": 12,
+  "training_episode_hours": 168,
+  "test_evaluated_during_selection": false
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "budget": 10000,
+    "checkpoint": "outputs/india_study/rl/adaptive_44_10000.zip",
+    "eens_kwh": 304.8286558469972,
+    "published_loss": 0.013210507725127996
+  },
+  {
+    "budget": 30000,
+    "checkpoint": "outputs/india_study/rl/adaptive_44_30000.zip",
+    "eens_kwh": 274.1072759418838,
+    "published_loss": 0.013243364049372763
+  }
+]

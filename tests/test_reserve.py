@@ -32,3 +32,19 @@ def test_infeasible_mass_not_conditioned_away():
     s[5, :, 2] = 0
     r = ReserveEstimator().estimate(s)
     assert r["risk_feasible"] and r["target_kwh"] == 10
+
+
+def test_vectorized_all_suffixes_match_original_including_infeasibility():
+    from microgrid.reserve import vectorized_suffix_reserves
+
+    rng = np.random.default_rng(2026)
+    for config in [BatteryConfig(), BatteryConfig(soh=0.7, dt_hours=0.5)]:
+        scenarios = rng.uniform(0, 40, (37, 24, 3))
+        target, flags, fraction = vectorized_suffix_reserves(scenarios, config)
+        for t in range(24):
+            expected = ReserveEstimator(config).estimate(scenarios[:, t:])
+            assert bool(flags[t]) == (expected["target_kwh"] is None)
+            assert fraction[t] == pytest.approx(expected["infeasible_fraction"])
+            if not flags[t]:
+                assert target[t] == pytest.approx(expected["target_kwh"])
+        assert target[-1] == config.minimum and not flags[-1]

@@ -1,0 +1,51 @@
+{
+  "data_status_user_declared": "constructed_india",
+  "data_sha256": "2eecb44c811ba72368c1b225cfa7ee5793c33906a399c904d2e5c053a5bb1f1d",
+  "partition": "validation_only",
+  "final_test_evaluated": false,
+  "arguments": {
+    "command": "feasibility",
+    "data": "data/india/reference/hourly.parquet",
+    "data_status": "constructed_india",
+    "output": "outputs/india_study/sizing_expanded",
+    "capacities": [
+      200.0,
+      400.0,
+      800.0,
+      1600.0
+    ],
+    "powers": [
+      50.0
+    ],
+    "renewable_scales": [
+      1.5,
+      2.0,
+      3.0
+    ],
+    "initial_socs": [
+      0.5
+    ],
+    "terminals": [
+      "minimum",
+      "initial"
+    ]
+  },
+  "splits": {
+    "train": [
+      0,
+      15782
+    ],
+    "validation": [
+      15782,
+      19727
+    ],
+    "calibration": [
+      19727,
+      22357
+    ],
+    "test": [
+      22357,
+      26304
+    ]
+  }
+}

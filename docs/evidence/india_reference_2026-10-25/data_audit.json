@@ -1,0 +1,57 @@
+{
+  "rows": 26304,
+  "start": "2021-12-31 18:30:00+00:00",
+  "end": "2024-12-31 17:30:00+00:00",
+  "missing_hours": 0,
+  "units": {
+    "pv_kw": "kW",
+    "wind_kw": "kW",
+    "load_kw": "kW"
+  },
+  "energy_kwh": {
+    "pv_kw": 244605.83094651217,
+    "wind_kw": 91904.81891037466,
+    "load_kw": 323791.53546107095
+  },
+  "case": "constructed_indian_reference_not_measured_local_microgrid",
+  "weather_source": "NASA POWER Jaisalmer gridded weather",
+  "demand_source_doi": "10.17632/y58jknpgs8.2",
+  "demand_authors": "Kumar, S.; Mukherjee, D.; Kalita, K. (2025)",
+  "source_url": "https://raw.githubusercontent.com/RudranshVyas/india-grid-forecast/9fc756aeceefb2e53d6494d48722f5dd771996e0/data/processed/hourly_raw.parquet",
+  "mirror_commit": "9fc756aeceefb2e53d6494d48722f5dd771996e0",
+  "source_raw_sha256": "c77ed3e200565c5609bd52806bef98f4e7eac22da6609d60750c8ce7a5fb75ed",
+  "weather_sha256": "6b5ff2290efc85c5157ca06fc64ee99b5aa18ed0afccdee67544690957800ce1",
+  "licence": "CC BY 4.0 reported in mirror documentation; primary Mendeley record blocked by proxy",
+  "primary_source_verification": "pending_not_independently_verified",
+  "demand_kind": "scaled_national_aggregate_proxy",
+  "units_before_scaling": "MW, according to mirror data dictionary",
+  "timezone_interpretation": "Asia/Kolkata according to mirror; not independently source-confirmed",
+  "weather_alignment": "half-overlap mean of adjacent UTC hours, piecewise constant hourly weather assumption",
+  "demand_outliers_repaired": 6,
+  "repair": "causal forward fill, maximum 3 hours, bounds 50,000\u2013300,000 MW",
+  "demand_target_training_mean_kw": 12.0,
+  "demand_scale": 6.78578965861655e-08,
+  "generation_capacities_training_only": {
+    "pv_capacity_kw": 46.69144088020389,
+    "wind_capacity_kw": 60.557031343160006
+  },
+  "generation_model": "simplified PV derate and wind curve at 10m; no hub-height validation",
+  "split_indices": {
+    "train": [
+      0,
+      15782
+    ],
+    "validation": [
+      15782,
+      19727
+    ],
+    "calibration": [
+      19727,
+      22357
+    ],
+    "test": [
+      22357,
+      26304
+    ]
+  }
+}

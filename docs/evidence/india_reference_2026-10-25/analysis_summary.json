@@ -1,0 +1,23 @@
+{
+  "test_hours": 3947,
+  "reserve_infeasible_fraction": 0.3407651380795541,
+  "raw_interval_coverage": 0.7466124661246613,
+  "corrected_interval_coverage": 0.8411246612466124,
+  "scenario_net_energy_upper95_coverage": 0.7560975609756098,
+  "throughput_vs_published_loss_spearman": 0.498683750948779,
+  "throughput_vs_published_loss_pvalue_descriptive_only": 0.025212579034594618,
+  "matched_reliability_tolerance_absolute_lpsp": 0.001,
+  "matched_to_rule_based": [
+    "rule_based",
+    "perfect_foresight_non_deployable",
+    "sac_vanilla_44",
+    "sac_fixed_42",
+    "sac_adaptive_42",
+    "sac_adaptive_43",
+    "sac_constrained_42",
+    "sac_constrained_43"
+  ],
+  "model_applicability": "Cell-level model; not calibrated to this pack. Mean25C battery assumption, daily DOD extrapolations. Offline SOH only.",
+  "rl_hourly_proxy_vs_daily_model_spearman": 0.8181818181818183,
+  "rl_proxy_ranking_trajectory_count": 12
+}

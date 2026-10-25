@@ -104,3 +104,38 @@ def end_of_step_targets(scenarios, estimator):
         targets.append(estimator.config.maximum if bad else result["target_kwh"])
         infeasible.append(bad)
     return np.array([*targets, estimator.config.minimum]), [*infeasible, False]
+
+
+def vectorized_suffix_reserves(scenarios, config=BatteryConfig(), alpha=0.05):
+    """Same recursion, vectorized over scenarios; all suffixes in O(N*H)."""
+    s = np.asarray(scenarios, float)
+    if s.ndim != 3 or s.shape[-1] != 3 or min(s.shape[:2]) < 1 or not 0 < alpha < 1:
+        raise ValueError("Invalid scenario tensor or risk")
+    if not np.isfinite(s).all() or (s < 0).any():
+        raise ValueError("Scenarios must be finite and nonnegative")
+    c = config
+    net = s[:, :, 2] - s[:, :, 0] - s[:, :, 1]
+    n, h = net.shape
+    needs = np.full(n, c.minimum)
+    values = np.empty((n, h + 1))
+    values[:, h] = needs
+    bad = np.zeros(n, bool)
+    for t in range(h - 1, -1, -1):
+        p = net[:, t]
+        needs = np.where(
+            p >= 0,
+            needs + np.maximum(p, 0) * c.dt_hours / c.discharge_efficiency,
+            np.maximum(
+                c.minimum,
+                needs
+                - np.minimum(np.maximum(-p, 0), c.power_kw) * c.dt_hours * c.charge_efficiency,
+            ),
+        )
+        bad |= (p > c.power_kw + 1e-9) | (needs > c.maximum + 1e-8)
+        values[:, t] = np.where(bad, np.inf, needs)
+    k = int(np.ceil((1 - alpha) * n)) - 1
+    targets = np.sort(values, axis=0)[k]
+    flags = ~np.isfinite(targets)
+    fraction = np.mean(~np.isfinite(values), axis=0)
+    # Absolute initial target plus end-of-step suffix targets, including E_min terminal.
+    return targets, flags, fraction
