@@ -10,6 +10,8 @@ A runnable Python research implementation for islanded **PV + wind + LFP-style b
 - [Evaluation and reproduction](EVALUATION.md)
 - [Recorded results and limitations](RESULTS.md)
 - [India case-study data plan](docs/india_case_study.md)
+- [Executable India research workflow](docs/india_workflow.md)
+- [Follow-up evidence and current blockers](docs/research_followup_results.md)
 - [Next feasibility and calibration experiment](docs/next_experiment.md)
 
 ## Run

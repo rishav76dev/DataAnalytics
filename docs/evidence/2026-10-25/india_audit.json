@@ -1,0 +1,16 @@
+{
+  "rows": 43848,
+  "start": "2020-01-01 00:00:00+00:00",
+  "end": "2024-12-31 23:00:00+00:00",
+  "missing_hours": 0,
+  "sources": "NASA POWER MERRA2 / SYN1DEG / POWER; see raw headers",
+  "temperature_range_c": [
+    2.96,
+    49.08
+  ],
+  "wind_range_ms": [
+    0.0,
+    13.14
+  ],
+  "generation_or_demand_observations": false
+}

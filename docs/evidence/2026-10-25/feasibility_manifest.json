@@ -1,0 +1,52 @@
+{
+  "data_status_user_declared": "synthetic",
+  "data_sha256": "b3740b371b49009af9fc236a66b0dec8655889db77a6e80ac982439473d92314",
+  "partition": "validation_only",
+  "final_test_evaluated": false,
+  "arguments": {
+    "command": "feasibility",
+    "data": "outputs/demo/data/hourly.parquet",
+    "data_status": "synthetic",
+    "output": "outputs/research_checks/feasibility",
+    "capacities": [
+      100.0,
+      200.0,
+      400.0
+    ],
+    "powers": [
+      25.0,
+      50.0
+    ],
+    "renewable_scales": [
+      0.75,
+      1.0,
+      1.5
+    ],
+    "initial_socs": [
+      0.1,
+      0.5
+    ],
+    "terminals": [
+      "minimum",
+      "initial"
+    ]
+  },
+  "splits": {
+    "train": [
+      0,
+      1296
+    ],
+    "validation": [
+      1296,
+      1620
+    ],
+    "calibration": [
+      1620,
+      1836
+    ],
+    "test": [
+      1836,
+      2160
+    ]
+  }
+}

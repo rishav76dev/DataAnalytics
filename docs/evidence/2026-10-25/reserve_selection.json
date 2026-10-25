@@ -1,0 +1,80 @@
+{
+  "fit_stop": 1036,
+  "residual_stop": 1296,
+  "tuning_start": 1296,
+  "tuning_hours": 72,
+  "evaluation_start": 1458,
+  "evaluation_hours": 72,
+  "chosen_fixed_fraction": 0.2,
+  "tuning_results": {
+    "0.2": {
+      "eens_kwh": 99.47768760146197,
+      "lpsp_energy": 0.11648515969908155,
+      "loss_of_load_hours": 11.0,
+      "curtailment_kwh": 407.1792803111911,
+      "throughput_kwh": 393.5451771569432,
+      "demand_kwh": 853.9945161979833,
+      "controller_seconds": 0.22934686693770345,
+      "controller_p95_ms": 4.760423654079204,
+      "ageing": {
+        "model_status": "illustrative_unvalidated",
+        "cyclic_loss_fraction": 0.00011283810067202573,
+        "calendar_loss_fraction": 0.00016427104722792606,
+        "total_loss_fraction": 0.0002771091478999518,
+        "equivalent_full_cycles": 1.9677258857847164
+      }
+    },
+    "0.4": {
+      "eens_kwh": 118.47768760146195,
+      "lpsp_energy": 0.13873354612267208,
+      "loss_of_load_hours": 12.0,
+      "curtailment_kwh": 407.1792803111911,
+      "throughput_kwh": 373.5451771569433,
+      "demand_kwh": 853.9945161979833,
+      "controller_seconds": 0.19804772800125647,
+      "controller_p95_ms": 3.197093597555068,
+      "ageing": {
+        "model_status": "illustrative_unvalidated",
+        "cyclic_loss_fraction": 0.00010503563786403766,
+        "calendar_loss_fraction": 0.00016427104722792606,
+        "total_loss_fraction": 0.0002693066850919637,
+        "equivalent_full_cycles": 1.8677258857847163
+      }
+    },
+    "0.6": {
+      "eens_kwh": 138.62909860605572,
+      "lpsp_energy": 0.16233019764955617,
+      "loss_of_load_hours": 15.0,
+      "curtailment_kwh": 407.1792803111912,
+      "throughput_kwh": 352.33316557316033,
+      "demand_kwh": 853.9945161979833,
+      "controller_seconds": 0.1821488930581836,
+      "controller_p95_ms": 2.7406281515141018,
+      "ageing": {
+        "model_status": "illustrative_unvalidated",
+        "cyclic_loss_fraction": 9.848851173443136e-05,
+        "calendar_loss_fraction": 0.00016427104722792606,
+        "total_loss_fraction": 0.0002627595589623574,
+        "equivalent_full_cycles": 1.7616658278658017
+      }
+    },
+    "0.8": {
+      "eens_kwh": 152.2631966655595,
+      "lpsp_energy": 0.17829528618455437,
+      "loss_of_load_hours": 17.0,
+      "curtailment_kwh": 407.1792803111911,
+      "throughput_kwh": 337.98148340526166,
+      "demand_kwh": 853.9945161979833,
+      "controller_seconds": 0.1954806860012468,
+      "controller_p95_ms": 3.1801133016415406,
+      "ageing": {
+        "model_status": "illustrative_unvalidated",
+        "cyclic_loss_fraction": 9.539482430796228e-05,
+        "calendar_loss_fraction": 0.00016427104722792606,
+        "total_loss_fraction": 0.00025966587153588834,
+        "equivalent_full_cycles": 1.6899074170263082
+      }
+    }
+  },
+  "final_test_evaluated": false
+}

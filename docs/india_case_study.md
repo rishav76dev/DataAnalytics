@@ -1,6 +1,6 @@
 # India case-study data and experiment plan
 
-Geographic decision: India, as requested. Status: proposed data acquisition and validation plan; no Indian historical dataset has been downloaded, audited or evaluated yet. All existing recorded results remain the October 24 synthetic baseline.
+Geographic decision: India, as requested. Status: five years of NASA POWER weather have now been downloaded and audited; suitable Indian hourly demand is still required. No Indian historical dispatch experiment has been evaluated yet. See [india_workflow.md](india_workflow.md) for implemented commands and executed status. All existing recorded results remain the October 24 synthetic baseline.
 
 ## Reference case
 
@@ -58,6 +58,6 @@ The provisional target remains 1% energy LPSP. Perfect-foresight feasibility is 
 
 ## Relationship to current code and outputs
 
-The existing CSV/Parquet ingestion and controllers can be reused after source-specific preprocessing passes the audit. This document does not add an India-data downloader, change the forecasting features, validate a demand proxy or produce new Indian controller results. See [next_experiment.md](next_experiment.md) for the full experimental gates and [../RESULTS.md](../RESULTS.md) for the preserved synthetic baseline.
+The existing CSV/Parquet ingestion and controllers can be reused after source-specific preprocessing passes the audit. The new [executable workflow](india_workflow.md) adds an India-weather downloader and validation commands. Forecast calendar features still use stored timestamps; no demand proxy has been validated and no Indian controller results have been produced. See [next_experiment.md](next_experiment.md) for the full experimental gates and [../RESULTS.md](../RESULTS.md) for the preserved synthetic baseline.
 
 The available synthetic review archive remains local at `outputs/audit/baseline_review.zip`. It contains traces and checksums for baseline diagnosis, not Indian historical observations.

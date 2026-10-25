@@ -1,0 +1,12 @@
+{
+  "source_url": "REPLACE_WITH_EXACT_DATASET_URL",
+  "licence": "REPLACE_WITH_VERIFIED_TERMS_AND_VERSION",
+  "site": "REPLACE_WITH_MEASUREMENT_SITE_OR_AGGREGATE_REGION",
+  "timezone": "Asia/Kolkata",
+  "interval_convention": "start",
+  "load_kind": "scaled_aggregate_proxy",
+  "wind_height_assumption": "REPLACE_WITH_DOCUMENTED_10M_OR_HUB_HEIGHT_POLICY",
+  "weather_terms_reference": "REPLACE_WITH_ARCHIVED_NASA_TERMS_REFERENCE",
+  "units": "kW",
+  "reuse_permitted": false
+}
