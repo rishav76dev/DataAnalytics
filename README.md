@@ -9,6 +9,8 @@ A runnable Python research implementation for islanded **PV + wind + LFP-style b
 - [Setup and installation](SETUP.md)
 - [Evaluation and reproduction](EVALUATION.md)
 - [Recorded results and limitations](RESULTS.md)
+- [India case-study data plan](docs/india_case_study.md)
+- [Next feasibility and calibration experiment](docs/next_experiment.md)
 
 ## Run
 
