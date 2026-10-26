@@ -1,0 +1,11 @@
+{
+  "all": {
+    "n": 11,
+    "spearman": 1.0
+  },
+  "reliability_qualified": {
+    "n": 6,
+    "spearman": 1.0
+  },
+  "scope": "Post-test ranking diagnostic on this case; no coefficient fit, causal claim or empirical degradation validation"
+}

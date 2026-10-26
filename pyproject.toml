@@ -7,7 +7,7 @@ name = "adaptive-microgrid"
 version = "0.1.0"
 description = "Reproducible islanded microgrid dispatch and adaptive reserve research workbench"
 requires-python = ">=3.12"
-dependencies = ["numpy>=2.0", "scipy>=1.14", "pandas>=2.2", "pyarrow>=18", "gymnasium>=1.0", "lightgbm>=4.5", "scikit-learn>=1.6", "pyyaml>=6", "matplotlib>=3.9", "rainflow>=3.2"]
+dependencies = ["numpy>=2.0", "scipy>=1.14", "pandas>=2.2", "pyarrow>=18", "gymnasium>=1.0", "lightgbm>=4.5", "scikit-learn>=1.6", "pyyaml>=6", "matplotlib>=3.9", "rainflow>=3.2", "openpyxl>=3.1"]
 
 [project.optional-dependencies]
 rl = ["stable-baselines3>=2.5", "torch>=2.5"]

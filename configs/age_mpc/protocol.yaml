@@ -1,0 +1,84 @@
+research_question: Reduce modelled ageing at noninferior realized reliability, not EENS superiority.
+rl_training: paused
+case: Jaisalmer NASA weather and scaled Indian national demand; not a measured local microgrid.
+fit: 2022
+residual_pool: 2023
+online_tail_initialization: 2024-01 through 2024-06
+parameter_selection: 2024-07 through 2024-12
+fresh_holdout: 2025-01-01 through 2025-06-24
+forecast:
+  quantiles: [0.1, 0.5, 0.9]
+  target: residual to known same-hour previous-week baseline
+  timezone: Asia/Kolkata
+  seasonal_features: true
+  n_estimators: 120
+scenarios:
+  count: 100
+  phase: local origin hour
+  seasonal_neighbors: 90
+  standardized_joint_residuals: max(training_std, 0.25 * abs(current_median))
+  generation_projection: fixed training-derived PV/wind nameplate limits
+  night_mask: NOAA civil twilight interval mask
+calibration:
+  object: simultaneous upper bounds on all contiguous DC-deficit intervals in next 23 hours
+  alpha: 0.05
+  window_days_per_phase: 90
+  minimum_days_per_phase: 30
+  delay_hours: 24
+  validation_coverage_gate: 0.90
+  interpretation: empirical prequential coverage; no exchangeability guarantee under drift
+battery:
+  candidate_capacity_kwh: [400, 800]
+  power_kw: 50
+  initial_soc: 0.5
+  soc_limits: [0.1, 0.9]
+  efficiencies: [0.95, 0.95]
+  renewable_multiplier: 2
+mpc:
+  horizon: 24
+  current_service: serve all physically feasible measured demand before charging optimization
+  lexicographic_objectives: [expected_EENS, reachable_reserve_violation, published_model_ageing_proxy]
+  adaptive_safety_buffer_fractions: [0.0, 0.1, 0.25, 0.5, 1.0]
+  numerical_solver: dual simplex with 10-second per-LP limit; 1e-6 kWh service and 1e-5 kWh reserve tolerances
+  process_isolation: spawn and one candidate per worker to avoid inherited solver thread state
+  fixed_reserve_fractions: [0.2, 0.4, 0.6, 0.8, 0.9]
+  scenario_eens_slack_kwh: [0.0, 1.0, 3.0]
+  common_inputs_and_damage_coefficients: true
+  reserve_parameter_refinement: bisection to 2 kWh resolution for both fixed and adaptive reserves; validation only
+  scenario_baseline_refinement: retest shared refined adaptive buffer at all three stochastic risk budgets
+endpoint:
+  normalization_hours: 24
+  policy: common recharge-only final day using actual renewable surplus; no discharge, grid import or invented energy
+  target: physical maximum energy
+  failed_restoration: invalidate endpoint-matched ageing claim
+  reporting: operational EENS separately from shared normalization-day EENS; ageing includes normalization
+matching:
+  margin_absolute_lpsp: 0.0001
+  endpoint_tolerance_kwh: 0.00001
+  selection: lowest modelled damage among validation-reliability-eligible candidates
+statistics:
+  bootstrap_replicates: 1000
+  paired_blocks_hours: [24, 168]
+  reliability_claim: noninferiority upper bound below predeclared margin
+  degradation_claim: upper bound of paired mean damage difference below zero
+  practical_model_damage_reduction_fraction: 0.01
+ageing:
+  published_model: BLAST-Lite LFP-Gr 250Ah; original parameters, no fitted pack-lifetime claim
+  primary_integration: effective_age_exact
+  reference_compatibility: historical upstream_euler retained and tested
+  battery_temperature_sensitivity_c: [25, 35]
+  update_window_sensitivity_hours: [12, 24, 48]
+  applicability: report extrapolated cycle depths; source-code validation is not empirical pack validation
+novelty_claim: withheld pending comparative results and verified related work
+
+primary_comparator: best validation-qualified fixed/stochastic/independent baseline by published-model damage
+independence_ablation: independently calibrated with its own equally refined safety buffer
+validation_noninferiority: both paired 24-hour and 168-hour bootstrap upper bounds below the margin
+
+strong_forecast_check: include separately tuned weekly-persistence point and fixed-reserve ageing MPC, since development point MAE beat the learned model
+
+capacity_feedback_sensitivity:
+  controllers: [rule_based, adaptive_age, best_validation_baseline]
+  battery_temperatures_c: [25, 35]
+  physics_update: daily published-model capacity fade, SOC preserved, lost stored energy explicitly accounted
+  selection: none; all primary parameters frozen

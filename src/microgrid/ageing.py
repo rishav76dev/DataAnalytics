@@ -45,7 +45,17 @@ def power_increment(loss, exposure, coefficient, exponent):
     return coefficient * exponent * (loss / coefficient) ** ((exponent - 1) / exponent) * exposure
 
 
-def update_lfp(state, time_hours, soc, temperature_c):
+def effective_age_increment(loss, exposure, coefficient, exponent):
+    """Exact constant-stress power-law step; semigroup consistent."""
+    if min(loss, exposure, coefficient) < 0 or exponent <= 0:
+        raise ValueError("Invalid ageing state/exposure")
+    if exposure == 0 or coefficient == 0:
+        return 0.0
+    equivalent = (loss / coefficient) ** (1 / exponent) if loss else 0.0
+    return coefficient * (equivalent + exposure) ** exponent - loss
+
+
+def update_lfp(state, time_hours, soc, temperature_c, integration="upstream_euler"):
     t, s, temp = (
         np.asarray(time_hours, float),
         np.asarray(soc, float),
@@ -61,11 +71,19 @@ def update_lfp(state, time_hours, soc, temperature_c):
         raise ValueError("Invalid time, SOC or temperature history")
     if (temp < 10).any() or (temp > 45).any():
         raise ValueError("Temperature outside published cycling range [10,45] C")
+    if (
+        not np.isfinite([state.calendar_loss, state.cycling_loss, state.efc]).all()
+        or min(state.calendar_loss, state.cycling_loss, state.efc) < 0
+    ):
+        raise ValueError("Invalid ageing state")
     if state.soh <= 0.5:
         raise ValueError("Model beyond configured end-of-life applicability")
     crate_series = np.abs(np.diff(s) / np.diff(t))
     if crate_series.max() * state.soh > 0.65 + 1e-9:
         raise ValueError("Conservative <=0.65C rate envelope exceeded")
+    charge_rate = np.max(np.maximum(np.diff(s), 0) / np.diff(t)) * state.soh
+    if np.min(temp) <= 10 + 1e-9 and charge_rate > 0.16 + 1e-9:
+        raise ValueError("Published 10C charge protocol limited to 0.16C")
     duration = t[-1] - t[0]
     # Match upstream nominal-capacity EFC/C-rate scaling at current health.
     efc = np.abs(np.diff(s)).sum() / 2 * state.soh
@@ -88,8 +106,11 @@ def update_lfp(state, time_hours, soc, temperature_c):
         )
         / duration
     )
-    dc = power_increment(state.calendar_loss, duration / 24, kcal, 0.526)
-    dy = power_increment(state.cycling_loss, efc, kcyc, 0.828)
+    if integration not in {"upstream_euler", "effective_age_exact"}:
+        raise ValueError("Unknown ageing integration")
+    integrate = power_increment if integration == "upstream_euler" else effective_age_increment
+    dc = integrate(state.calendar_loss, duration / 24, kcal, 0.526)
+    dy = integrate(state.cycling_loss, efc, kcyc, 0.828)
     state.calendar_loss += float(dc)
     state.cycling_loss += float(dy)
     state.efc += float(efc)
@@ -104,7 +125,9 @@ def update_lfp(state, time_hours, soc, temperature_c):
     }
 
 
-def evaluate_lfp(soc, dt_hours=1.0, temperature_c=25.0, chunk_hours=24):
+def evaluate_lfp(
+    soc, dt_hours=1.0, temperature_c=25.0, chunk_hours=24, integration="upstream_euler"
+):
     """Piecewise daily offline ageing
     dispatch SOH remains fixed unless coupled explicitly."""
     s = np.asarray(soc, float)
@@ -125,6 +148,7 @@ def evaluate_lfp(soc, dt_hours=1.0, temperature_c=25.0, chunk_hours=24):
                 np.arange(stop - start + 1) * dt_hours,
                 s[start : stop + 1],
                 temp[start : stop + 1],
+                integration=integration,
             )
         )
         start = stop
@@ -142,6 +166,9 @@ def evaluate_lfp(soc, dt_hours=1.0, temperature_c=25.0, chunk_hours=24):
         "rainflow_efc": float(sum(depth * count for depth, _, count, _, _ in cycles)),
         "temperature_assumption_c": float(temp.mean()),
         "update_chunk_hours": chunk_hours,
+        "integration": integration,
+        "out_of_fit_dod_windows": sum(not 0.8 <= w["dod"] <= 1 for w in windows),
+        "window_count": len(windows),
         "dispatch_soh_feedback": False,
         "windows": windows,
         "limitation": "Daily DOD below fitted 0.8–1 range is extrapolation; cell model is not validated for this pack.",

@@ -1,6 +1,8 @@
 # Setup guide
 
-For the completed constructed Indian reference experiment, follow [india_research_execution.md](docs/india_research_execution.md) after installing dependencies below. Its inputs, source limitations and outcomes are in [INDIA_RESULTS.md](INDIA_RESULTS.md). The default `microgrid demo` remains synthetic.
+The primary research path is now degradation-aware adaptive-reserve MPC. Read [MPC results](MPC_RESEARCH.md) and [the staged reproduction guide](docs/age_mpc_reproduction.md). The frozen lock includes `openpyxl` for primary publisher-workbook verification. No service or long research training job needs starting; further SAC research training is paused.
+
+For the historical 2022–2024 experiment, see [india_research_execution.md](docs/india_research_execution.md) and [INDIA_RESULTS.md](INDIA_RESULTS.md). The current frozen 2025 workflow is linked above. The default `microgrid demo` remains synthetic.
 
 This project runs hourly islanded microgrid simulations, forecasting, reserve estimation, optimization baselines, and optional SAC training. No GPU, API keys, or background services are required for the synthetic workflow.
 
@@ -87,4 +89,4 @@ The saved environment configuration contains a frozen dependency installation sc
 - If dependencies are missing, rerun the frozen installation command with the required extras.
 - If Matplotlib cache permissions are restricted outside the demo command, set `MPLCONFIGDIR=/tmp/microgrid-mpl` and `XDG_CACHE_HOME=/tmp/microgrid-cache`.
 - An infeasible reserve is a reported model outcome, not an installation failure. Inspect `reserves.json` and the capacity assumptions.
-- `outputs/` and `.venv/` are ignored by Git. Regenerate outputs after cloning; models and results are not included in the source repository.
+- `outputs/` and `.venv/` are ignored by Git. Large models and caches are regenerated; the current MPC results and full traces are committed in `docs/evidence/age_mpc_v2/`.

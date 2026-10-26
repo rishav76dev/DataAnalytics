@@ -1,0 +1,599 @@
+{
+  "protocol_sha256": "989ae8f297cfa60d68a871b5c214a05fcce54650572b59237db5c000ffb1b541",
+  "data_sha256": "45f89d43022a3360c98bbd54c819004d4241b8719c05239d56e78174a2c0a778",
+  "capacity_kwh": 400,
+  "battery": {
+    "capacity_kwh": 400,
+    "power_kw": 50,
+    "soc_min": 0.1,
+    "soc_max": 0.9,
+    "initial_soc": 0.5,
+    "charge_efficiency": 0.95,
+    "discharge_efficiency": 0.95,
+    "soh": 1.0,
+    "dt_hours": 1.0
+  },
+  "selection": {
+    "adaptive_age": {
+      "name": "adaptive_age_refined_0.40234375",
+      "kind": "adaptive",
+      "buffer_fraction": 0.40234375,
+      "forecast": "research",
+      "family": "adaptive_age"
+    },
+    "deterministic_age": {
+      "name": "deterministic_age",
+      "kind": "point",
+      "family": "deterministic_age"
+    },
+    "fixed_age": {
+      "name": "fixed_age_refined_0.89687500",
+      "kind": "fixed",
+      "fraction": 0.8968750000000001,
+      "forecast": "research",
+      "family": "fixed_age"
+    },
+    "scenario": {
+      "name": "scenario_0.0",
+      "kind": "scenario",
+      "slack": 0.0,
+      "family": "scenario"
+    },
+    "scenario_envelope": {
+      "name": "scenario_same_buffer_0.0",
+      "kind": "scenario_envelope",
+      "buffer_fraction": 0.40234375,
+      "slack": 0.0,
+      "family": "scenario_envelope"
+    },
+    "adaptive_no_calendar": {
+      "name": "adaptive_no_calendar_matched_buffer",
+      "kind": "adaptive_no_calendar",
+      "buffer_fraction": 0.40234375,
+      "family": "adaptive_no_calendar"
+    },
+    "adaptive_raw": {
+      "name": "adaptive_raw_matched_buffer",
+      "kind": "adaptive_raw",
+      "buffer_fraction": 0.40234375,
+      "family": "adaptive_raw"
+    },
+    "rule_based": {
+      "name": "rule_based",
+      "kind": "rule"
+    },
+    "fixed_persistence": {
+      "name": "fixed_persistence_refined_0.89687500",
+      "kind": "fixed",
+      "fraction": 0.8968750000000001,
+      "forecast": "persistence",
+      "family": "fixed_persistence"
+    },
+    "persistence_age": {
+      "name": "persistence_age",
+      "kind": "point",
+      "forecast": "persistence",
+      "family": "persistence_age"
+    },
+    "adaptive_independent": {
+      "name": "adaptive_independent_refined_0.29296875",
+      "kind": "adaptive_independent",
+      "buffer_fraction": 0.29296875,
+      "forecast": "research",
+      "family": "adaptive_independent"
+    }
+  },
+  "validation_qualified": {
+    "adaptive_age": true,
+    "deterministic_age": false,
+    "fixed_age": true,
+    "scenario": false,
+    "scenario_envelope": true,
+    "adaptive_no_calendar": true,
+    "adaptive_raw": false,
+    "fixed_persistence": true,
+    "persistence_age": false,
+    "adaptive_independent": true
+  },
+  "validation_baseline": {
+    "eens_kwh": 147.58709799832081,
+    "lpsp_energy": 0.0025200110589624937,
+    "loss_of_load_hours": 20.0,
+    "curtailment_kwh": 39391.28235000204,
+    "throughput_kwh": 50078.99989985277,
+    "demand_kwh": 58566.05171371092,
+    "operational_hours": 4392,
+    "normalization_hours": 24,
+    "normalization_eens_kwh": 146.78694090972184,
+    "terminal_energy_kwh": 360.0,
+    "terminal_full": true,
+    "initial_energy_kwh": 200.0,
+    "controller_seconds": 0.4797184222843498,
+    "controller_p95_ms": 0.21303975518094376,
+    "surplus_mean_soc": 0.7946393982794089,
+    "ageing": {
+      "25c_12h": {
+        "model": "BLAST-Lite LFP-Gr 250Ah published-data model",
+        "source_doi": "10.1016/j.est.2023.109042",
+        "source_commit": "b093495b47dc40dd96dba865d91f553619501e94",
+        "status": "published_parameter_model_numerically_verified_not_pack_validated",
+        "soh": 0.9875852160630145,
+        "calendar_loss_fraction": 0.009929083812920866,
+        "cycling_loss_fraction": 0.0024857001240645676,
+        "total_loss_fraction": 0.012414783936985474,
+        "throughput_efc_soh_adjusted": 62.164999999717104,
+        "rainflow_efc": 62.701677053352135,
+        "temperature_assumption_c": 25.0,
+        "update_chunk_hours": 12,
+        "integration": "effective_age_exact",
+        "out_of_fit_dod_windows": 368,
+        "window_count": 368,
+        "dispatch_soh_feedback": false,
+        "limitation": "Daily DOD below fitted 0.8\u20131 range is extrapolation; cell model is not validated for this pack."
+      },
+      "25c_24h": {
+        "model": "BLAST-Lite LFP-Gr 250Ah published-data model",
+        "source_doi": "10.1016/j.est.2023.109042",
+        "source_commit": "b093495b47dc40dd96dba865d91f553619501e94",
+        "status": "published_parameter_model_numerically_verified_not_pack_validated",
+        "soh": 0.987526001823327,
+        "calendar_loss_fraction": 0.009855572125692423,
+        "cycling_loss_fraction": 0.002618426050980607,
+        "total_loss_fraction": 0.012473998176673051,
+        "throughput_efc_soh_adjusted": 62.16465580250317,
+        "rainflow_efc": 62.701677053352135,
+        "temperature_assumption_c": 25.0,
+        "update_chunk_hours": 24,
+        "integration": "effective_age_exact",
+        "out_of_fit_dod_windows": 182,
+        "window_count": 184,
+        "dispatch_soh_feedback": false,
+        "limitation": "Daily DOD below fitted 0.8\u20131 range is extrapolation; cell model is not validated for this pack."
+      },
+      "25c_48h": {
+        "model": "BLAST-Lite LFP-Gr 250Ah published-data model",
+        "source_doi": "10.1016/j.est.2023.109042",
+        "source_commit": "b093495b47dc40dd96dba865d91f553619501e94",
+        "status": "published_parameter_model_numerically_verified_not_pack_validated",
+        "soh": 0.9875115265440061,
+        "calendar_loss_fraction": 0.009845426575168636,
+        "cycling_loss_fraction": 0.0026430468808253255,
+        "total_loss_fraction": 0.01248847345599391,
+        "throughput_efc_soh_adjusted": 62.16613271634192,
+        "rainflow_efc": 62.701677053352135,
+        "temperature_assumption_c": 25.0,
+        "update_chunk_hours": 48,
+        "integration": "effective_age_exact",
+        "out_of_fit_dod_windows": 90,
+        "window_count": 92,
+        "dispatch_soh_feedback": false,
+        "limitation": "Daily DOD below fitted 0.8\u20131 range is extrapolation; cell model is not validated for this pack."
+      },
+      "35c_12h": {
+        "model": "BLAST-Lite LFP-Gr 250Ah published-data model",
+        "source_doi": "10.1016/j.est.2023.109042",
+        "source_commit": "b093495b47dc40dd96dba865d91f553619501e94",
+        "status": "published_parameter_model_numerically_verified_not_pack_validated",
+        "soh": 0.9798581796198892,
+        "calendar_loss_fraction": 0.01819366210167597,
+        "cycling_loss_fraction": 0.0019481582784348613,
+        "total_loss_fraction": 0.02014182038011081,
+        "throughput_efc_soh_adjusted": 61.80830085810977,
+        "rainflow_efc": 62.701677053352135,
+        "temperature_assumption_c": 35.0,
+        "update_chunk_hours": 12,
+        "integration": "effective_age_exact",
+        "out_of_fit_dod_windows": 368,
+        "window_count": 368,
+        "dispatch_soh_feedback": false,
+        "limitation": "Daily DOD below fitted 0.8\u20131 range is extrapolation; cell model is not validated for this pack."
+      },
+      "35c_24h": {
+        "model": "BLAST-Lite LFP-Gr 250Ah published-data model",
+        "source_doi": "10.1016/j.est.2023.109042",
+        "source_commit": "b093495b47dc40dd96dba865d91f553619501e94",
+        "status": "published_parameter_model_numerically_verified_not_pack_validated",
+        "soh": 0.9798810995619165,
+        "calendar_loss_fraction": 0.018066703346422703,
+        "cycling_loss_fraction": 0.002052197091660832,
+        "total_loss_fraction": 0.02011890043808351,
+        "throughput_efc_soh_adjusted": 61.81114559117505,
+        "rainflow_efc": 62.701677053352135,
+        "temperature_assumption_c": 35.0,
+        "update_chunk_hours": 24,
+        "integration": "effective_age_exact",
+        "out_of_fit_dod_windows": 182,
+        "window_count": 184,
+        "dispatch_soh_feedback": false,
+        "limitation": "Daily DOD below fitted 0.8\u20131 range is extrapolation; cell model is not validated for this pack."
+      },
+      "35c_48h": {
+        "model": "BLAST-Lite LFP-Gr 250Ah published-data model",
+        "source_doi": "10.1016/j.est.2023.109042",
+        "source_commit": "b093495b47dc40dd96dba865d91f553619501e94",
+        "status": "published_parameter_model_numerically_verified_not_pack_validated",
+        "soh": 0.9798794301056204,
+        "calendar_loss_fraction": 0.01804901039032219,
+        "cycling_loss_fraction": 0.0020715595040574496,
+        "total_loss_fraction": 0.020120569894379603,
+        "throughput_efc_soh_adjusted": 61.81427990232056,
+        "rainflow_efc": 62.701677053352135,
+        "temperature_assumption_c": 35.0,
+        "update_chunk_hours": 48,
+        "integration": "effective_age_exact",
+        "out_of_fit_dod_windows": 90,
+        "window_count": 92,
+        "dispatch_soh_feedback": false,
+        "limitation": "Daily DOD below fitted 0.8\u20131 range is extrapolation; cell model is not validated for this pack."
+      }
+    },
+    "candidate": {
+      "name": "rule_400",
+      "kind": "rule"
+    },
+    "capacity_kwh": 400,
+    "infeasible_fraction": 0.0
+  },
+  "validation_matching_margin_kwh": 5.8566051713710925,
+  "calibration_validation_gate_pass": true,
+  "calibration_summary": {
+    "overall": {
+      "origins": 4393,
+      "raw_joint_path_coverage": 0.4798543136808559,
+      "calibrated_joint_path_coverage": 0.9480992488049169
+    },
+    "by_month": {
+      "2024-07": {
+        "origins": 744,
+        "raw_joint_path_coverage": 0.2056451612903226,
+        "calibrated_joint_path_coverage": 0.9395161290322581
+      },
+      "2024-08": {
+        "origins": 744,
+        "raw_joint_path_coverage": 0.3602150537634409,
+        "calibrated_joint_path_coverage": 0.8978494623655914
+      },
+      "2024-09": {
+        "origins": 720,
+        "raw_joint_path_coverage": 0.4513888888888889,
+        "calibrated_joint_path_coverage": 0.9888888888888889
+      },
+      "2024-10": {
+        "origins": 744,
+        "raw_joint_path_coverage": 0.5779569892473119,
+        "calibrated_joint_path_coverage": 1.0
+      },
+      "2024-11": {
+        "origins": 720,
+        "raw_joint_path_coverage": 0.8194444444444444,
+        "calibrated_joint_path_coverage": 1.0
+      },
+      "2024-12": {
+        "origins": 721,
+        "raw_joint_path_coverage": 0.47434119278779474,
+        "calibrated_joint_path_coverage": 0.8626907073509015
+      }
+    },
+    "by_origin_hour": {
+      "0": {
+        "origins": 184,
+        "raw_joint_path_coverage": 0.4891304347826087,
+        "calibrated_joint_path_coverage": 0.9565217391304348
+      },
+      "1": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4918032786885246,
+        "calibrated_joint_path_coverage": 0.9398907103825137
+      },
+      "2": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4808743169398907,
+        "calibrated_joint_path_coverage": 0.9617486338797814
+      },
+      "3": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4918032786885246,
+        "calibrated_joint_path_coverage": 0.9617486338797814
+      },
+      "4": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.5081967213114754,
+        "calibrated_joint_path_coverage": 0.9562841530054644
+      },
+      "5": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.46994535519125685,
+        "calibrated_joint_path_coverage": 0.9344262295081968
+      },
+      "6": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.453551912568306,
+        "calibrated_joint_path_coverage": 0.9344262295081968
+      },
+      "7": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.43169398907103823,
+        "calibrated_joint_path_coverage": 0.9453551912568307
+      },
+      "8": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.46994535519125685,
+        "calibrated_joint_path_coverage": 0.9289617486338798
+      },
+      "9": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4808743169398907,
+        "calibrated_joint_path_coverage": 0.9508196721311475
+      },
+      "10": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4808743169398907,
+        "calibrated_joint_path_coverage": 0.9453551912568307
+      },
+      "11": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4426229508196721,
+        "calibrated_joint_path_coverage": 0.9508196721311475
+      },
+      "12": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4644808743169399,
+        "calibrated_joint_path_coverage": 0.9344262295081968
+      },
+      "13": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.48633879781420764,
+        "calibrated_joint_path_coverage": 0.9562841530054644
+      },
+      "14": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.46994535519125685,
+        "calibrated_joint_path_coverage": 0.9453551912568307
+      },
+      "15": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4371584699453552,
+        "calibrated_joint_path_coverage": 0.9453551912568307
+      },
+      "16": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4972677595628415,
+        "calibrated_joint_path_coverage": 0.9508196721311475
+      },
+      "17": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4972677595628415,
+        "calibrated_joint_path_coverage": 0.9508196721311475
+      },
+      "18": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4972677595628415,
+        "calibrated_joint_path_coverage": 0.9562841530054644
+      },
+      "19": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4972677595628415,
+        "calibrated_joint_path_coverage": 0.9562841530054644
+      },
+      "20": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.5136612021857924,
+        "calibrated_joint_path_coverage": 0.9453551912568307
+      },
+      "21": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.5027322404371585,
+        "calibrated_joint_path_coverage": 0.9453551912568307
+      },
+      "22": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4808743169398907,
+        "calibrated_joint_path_coverage": 0.9508196721311475
+      },
+      "23": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.4808743169398907,
+        "calibrated_joint_path_coverage": 0.9508196721311475
+      }
+    }
+  },
+  "code_sha256": {
+    "/workspace/DataAnalytics/scripts/age_mpc_study.py": "564365ca19bc0847f3cca635d84e7677bb1198c828bb3662d2647b743af4baaf",
+    "src/microgrid/agents.py": "9abcba3da99f5aa88bce6cd321caaf9ee3bb541b5ac54f312dab075677dd8c8d",
+    "src/microgrid/ageing.py": "81bfcb0e5e4d7d6713d486af4e8b65d5697acff85c1e6003ad16418bedc8b658",
+    "src/microgrid/reserve.py": "d0c2e678459e68902420151c3956c9d5b4fe0713cc6eb6d1e32a82098436d136",
+    "src/microgrid/forecasting.py": "8f551aaade699bddf65f266a7ae768924d4314230e5c12c60bed3caf1af81194",
+    "src/microgrid/controllers.py": "9d50e3943be2f0700cd064ee92f965fea2de3b37866b3454da516bb368271b66",
+    "src/microgrid/__init__.py": "25e0ed1a3e403a51ed8ce4572f30d013548f1d191509f7f5170fe93ef835db8c",
+    "src/microgrid/ageing_dispatch.py": "2bfb0a335d42ad55db2d48a9a9fba48ff0890d584623d3d58181437266929461",
+    "src/microgrid/age_mpc.py": "0b39d3b55e7e70e5827414ee805115faf6e392b3b79e224b0101de24bc3f6e7c",
+    "src/microgrid/phase_forecasts.py": "fd8353642983d4542386d30140563fdae2b91d6ec76ac12963356b0252432cf5",
+    "src/microgrid/calibration.py": "4693158feb78573fe1ecfd45123787ac21fa520e677826ca1481ce4d76cfa17e",
+    "src/microgrid/physics.py": "7973b531b8fcf6de3482936a3ba9362a67135565760fb8b6bd8125548d773853",
+    "src/microgrid/cli.py": "7598ef24d80465f8e7bb504a4e8e1bb1f38ac244c9b1660d3b805d4a3bfeb0e7",
+    "src/microgrid/research_data.py": "3089f579fe0e232c2e8a2dc920a3e8984ea6e73d17a4e7065786a820b04c8301",
+    "src/microgrid/reserve_study.py": "e25b046f2f919e1f85c5963c046f86d48a63909017f2db2a84d121d4d4f0d22f",
+    "src/microgrid/trajectory_calibration.py": "e335d93203add90c914327d197e44c3c5858be82a31df3ca78e41a55e33578ef",
+    "src/microgrid/data.py": "4b6d223e7eb8f3873ba2779b186908aacdaa3c8a88372709353b9463c04795d3",
+    "src/microgrid/scenarios.py": "43e090da984cc8e2c0fbf07e82f5282cdad980fe93277da58dd3db66d10287b2",
+    "src/microgrid/feasibility.py": "f1a364e7e23f143ca1a98ecc92e62e22e2548f32fce86d53b30a449ea572d4e1",
+    "src/microgrid/environment.py": "ef195691e31b034880419a3d2a5f1411627bd90874643d0e56d0bda2b0bc6378",
+    "src/microgrid/india.py": "e2d0833d4e222770d1c5598f74f25fac252c96c2512b65b416a08783350b8afe",
+    "src/microgrid/evaluation.py": "99a8475ddec10205e7e3747a7a62c13af3e01862e00947c29e75ae7cdb84b022"
+  },
+  "test_evaluated": false,
+  "claim_rule": "No degradation superiority if reliability/endpoint/calibration/applicability gates fail",
+  "primary_comparator": "adaptive_independent",
+  "independent_validation_calibration": {
+    "overall": {
+      "origins": 4393,
+      "raw_joint_path_coverage": 0.2592761211017528,
+      "calibrated_joint_path_coverage": 0.9715456407921693
+    },
+    "by_month": {
+      "2024-07": {
+        "origins": 744,
+        "raw_joint_path_coverage": 0.06720430107526881,
+        "calibrated_joint_path_coverage": 0.9516129032258065
+      },
+      "2024-08": {
+        "origins": 744,
+        "raw_joint_path_coverage": 0.17069892473118278,
+        "calibrated_joint_path_coverage": 0.9220430107526881
+      },
+      "2024-09": {
+        "origins": 720,
+        "raw_joint_path_coverage": 0.19444444444444445,
+        "calibrated_joint_path_coverage": 1.0
+      },
+      "2024-10": {
+        "origins": 744,
+        "raw_joint_path_coverage": 0.24596774193548387,
+        "calibrated_joint_path_coverage": 1.0
+      },
+      "2024-11": {
+        "origins": 720,
+        "raw_joint_path_coverage": 0.5680555555555555,
+        "calibrated_joint_path_coverage": 1.0
+      },
+      "2024-12": {
+        "origins": 721,
+        "raw_joint_path_coverage": 0.31900138696255204,
+        "calibrated_joint_path_coverage": 0.957004160887656
+      }
+    },
+    "by_origin_hour": {
+      "0": {
+        "origins": 184,
+        "raw_joint_path_coverage": 0.2717391304347826,
+        "calibrated_joint_path_coverage": 0.967391304347826
+      },
+      "1": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.2677595628415301,
+        "calibrated_joint_path_coverage": 0.9672131147540983
+      },
+      "2": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.2896174863387978,
+        "calibrated_joint_path_coverage": 0.9726775956284153
+      },
+      "3": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.273224043715847,
+        "calibrated_joint_path_coverage": 0.9890710382513661
+      },
+      "4": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.273224043715847,
+        "calibrated_joint_path_coverage": 0.9781420765027322
+      },
+      "5": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.28415300546448086,
+        "calibrated_joint_path_coverage": 0.9726775956284153
+      },
+      "6": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.2786885245901639,
+        "calibrated_joint_path_coverage": 0.9781420765027322
+      },
+      "7": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.25136612021857924,
+        "calibrated_joint_path_coverage": 0.9672131147540983
+      },
+      "8": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.2786885245901639,
+        "calibrated_joint_path_coverage": 0.9726775956284153
+      },
+      "9": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.2568306010928962,
+        "calibrated_joint_path_coverage": 0.9672131147540983
+      },
+      "10": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.2568306010928962,
+        "calibrated_joint_path_coverage": 0.9617486338797814
+      },
+      "11": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.2185792349726776,
+        "calibrated_joint_path_coverage": 0.9781420765027322
+      },
+      "12": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.21311475409836064,
+        "calibrated_joint_path_coverage": 0.9672131147540983
+      },
+      "13": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.1912568306010929,
+        "calibrated_joint_path_coverage": 0.9781420765027322
+      },
+      "14": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.18032786885245902,
+        "calibrated_joint_path_coverage": 0.9781420765027322
+      },
+      "15": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.18032786885245902,
+        "calibrated_joint_path_coverage": 0.9781420765027322
+      },
+      "16": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.22404371584699453,
+        "calibrated_joint_path_coverage": 0.9672131147540983
+      },
+      "17": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.26229508196721313,
+        "calibrated_joint_path_coverage": 0.9672131147540983
+      },
+      "18": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.30601092896174864,
+        "calibrated_joint_path_coverage": 0.9672131147540983
+      },
+      "19": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.2896174863387978,
+        "calibrated_joint_path_coverage": 0.9672131147540983
+      },
+      "20": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.273224043715847,
+        "calibrated_joint_path_coverage": 0.9672131147540983
+      },
+      "21": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.30601092896174864,
+        "calibrated_joint_path_coverage": 0.9726775956284153
+      },
+      "22": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.3114754098360656,
+        "calibrated_joint_path_coverage": 0.9672131147540983
+      },
+      "23": {
+        "origins": 183,
+        "raw_joint_path_coverage": 0.28415300546448086,
+        "calibrated_joint_path_coverage": 0.9672131147540983
+      }
+    }
+  },
+  "refined": true,
+  "refinement_resolution_dc_kwh": 2.0,
+  "refinement_reason": "Equal energy precision for fixed/adaptive reserve prevents a coarse fixed baseline from creating an apparent advantage; no fresh-test outcomes used.",
+  "model_hashes": {
+    "forecaster.pkl": "92c94f556953808df893f1c7291e0806ca2fd3706cc1dd7c8568a2fc28205ce5",
+    "pool.pkl": "d60d7d8f568c568c8784d5112f2ecfd0a7d7798b675a0890b31bcac339f9e352",
+    "development_calibrator.pkl": "a119101baeb0ac1ad7d3a6219b3caf8042fcb03ef07045a6c4815c07a3779c33",
+    "development_independent_calibrator.pkl": "9c4547ab14af3411137d02e2c0ab79a3e6939e098baed17b146ae233850c1098",
+    "marginal_interval_correction.npy": "13ef0de5ea0ebf90cfe6fe6900febdfbed491c525fa49f060b60333665b19dc4"
+  },
+  "artifact_receipt_note": "Hash coverage completed before any fresh-test evaluation; selected parameters unchanged."
+}

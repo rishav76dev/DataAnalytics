@@ -2,10 +2,16 @@
 
 A runnable Python research implementation for islanded **PV + wind + LFP-style battery + demand** dispatch. Implements physical simulation, conventional optimization, quantile forecasting, joint empirical scenarios, a validated reserve recursion, and SAC training/evaluation entry points.
 
-**Research status:** the original synthetic demonstration is preserved. A later **2022–2024 constructed Indian reference study** has been executed, using Jaisalmer weather and a scaled national-demand mirror, with a 3,947-hour test and three SAC seeds per variant. Its negative findings, source-confidence limits and published-model ageing results are in [INDIA_RESULTS.md](INDIA_RESULTS.md). The adaptive advantage remains unproven; this is not a measured local microgrid or a validated pack-lifetime claim.
+**Current research:** [degradation-aware adaptive-reserve MPC](MPC_RESEARCH.md), with strong tuned baselines, primary-source demand verification, delayed deficit-envelope calibration and a frozen **2025 holdout (4,200 hours)**. Adaptive MPC served all operational demand and predicted 1.78% less capacity loss than tuned fixed reserve, but the weekly confidence interval includes zero. It did not establish an advantage against the preselected primary comparator. Seasonal undercoverage and battery-model extrapolation remain material limitations. **No robust ageing superiority, validated lifetime extension or IEEE-level novelty is established. Further SAC research training is paused.**
+
+Full primary and capacity-feedback hourly traces are [committed for review](docs/evidence/age_mpc_v2/README.md). The case combines Jaisalmer weather with scaled national demand; it is not a measured local microgrid. The earlier [2022–2024 study](INDIA_RESULTS.md) and original synthetic demonstration remain historical baselines.
 
 ## Guides
 
+- [Current MPC findings and research decision](MPC_RESEARCH.md)
+- [Degradation-MPC protocol](docs/degradation_mpc_protocol.md)
+- [Data and battery validation card](docs/age_mpc_validation.md)
+- [Reproduce or verify the frozen MPC evidence](docs/age_mpc_reproduction.md)
 - [Indian reference-case results and research decision](INDIA_RESULTS.md)
 - [Reproduce the completed computational study](docs/india_research_execution.md)
 - [Why greedy is already EENS-optimal under the current assumptions](docs/greedy_reliability_limit.md)
@@ -53,6 +59,8 @@ CSV requires `timestamp,pv_kw,wind_kw,load_kw`. Timestamps must be strictly incr
 Splits are chronological **60% training / 15% validation / 10% calibration / 15% final test**. Features use only measurements before forecast origin. Fit targets end before training boundary. Completed residual blocks end before evaluation starts. Current bus powers are assumed observed at the start of dispatch; each scenario's first stage uses that same observation. Future actual values appear only in the explicitly non-deployable perfect-foresight reference.
 
 ## SAC
+
+These entry points are retained for historical reproducibility and integration checks. Further SAC research training is paused until data, calibration, battery applicability and matched-reliability gates support it.
 
 ```bash
 # Run four short integration training/evaluation jobs, seed 42.

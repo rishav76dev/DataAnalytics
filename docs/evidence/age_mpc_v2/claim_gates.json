@@ -1,0 +1,64 @@
+{
+  "primary_comparator": "adaptive_independent",
+  "comparisons": {
+    "fixed_age": {
+      "direct_paired_reliability_noninferiority": true,
+      "both_match_greedy": true,
+      "damage_ci_below_zero_both_blocks": false,
+      "practical_reduction_at_least_one_percent": true,
+      "sensitivity_sign_stable": true,
+      "computational_superiority_gate": false
+    },
+    "scenario": {
+      "direct_paired_reliability_noninferiority": true,
+      "both_match_greedy": false,
+      "damage_ci_below_zero_both_blocks": false,
+      "practical_reduction_at_least_one_percent": false,
+      "sensitivity_sign_stable": false,
+      "computational_superiority_gate": false
+    },
+    "scenario_envelope": {
+      "direct_paired_reliability_noninferiority": true,
+      "both_match_greedy": true,
+      "damage_ci_below_zero_both_blocks": false,
+      "practical_reduction_at_least_one_percent": false,
+      "sensitivity_sign_stable": true,
+      "computational_superiority_gate": false
+    },
+    "deterministic_age": {
+      "direct_paired_reliability_noninferiority": true,
+      "both_match_greedy": false,
+      "damage_ci_below_zero_both_blocks": false,
+      "practical_reduction_at_least_one_percent": false,
+      "sensitivity_sign_stable": false,
+      "computational_superiority_gate": false
+    },
+    "adaptive_independent": {
+      "direct_paired_reliability_noninferiority": true,
+      "both_match_greedy": false,
+      "damage_ci_below_zero_both_blocks": false,
+      "practical_reduction_at_least_one_percent": false,
+      "sensitivity_sign_stable": false,
+      "computational_superiority_gate": false
+    },
+    "fixed_persistence": {
+      "direct_paired_reliability_noninferiority": true,
+      "both_match_greedy": true,
+      "damage_ci_below_zero_both_blocks": false,
+      "practical_reduction_at_least_one_percent": true,
+      "sensitivity_sign_stable": true,
+      "computational_superiority_gate": false
+    },
+    "persistence_age": {
+      "direct_paired_reliability_noninferiority": true,
+      "both_match_greedy": false,
+      "damage_ci_below_zero_both_blocks": false,
+      "practical_reduction_at_least_one_percent": false,
+      "sensitivity_sign_stable": false,
+      "computational_superiority_gate": false
+    }
+  },
+  "pack_applicability_validated": false,
+  "ieee_novelty_established": false,
+  "conclusion": "No robust matched-reliability ageing superiority established"
+}

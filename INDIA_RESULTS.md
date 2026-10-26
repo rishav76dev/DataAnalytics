@@ -1,5 +1,7 @@
 # Indian reference-case research results
 
+The 2022–2024 results below are preserved. The newer [degradation-aware MPC study](MPC_RESEARCH.md) verifies the primary 2024–2025 demand workbook and licence, tests a fresh 2025 holdout, and releases full traces. Earlier primary-source access limitations described here were subsequently resolved for that workbook; site-demand representativeness and pack validation remain unresolved. Further SAC research training is paused.
+
 **Decision: the proposed adaptive reliability–degradation advantage is not demonstrated.** This is a completed computational experiment with negative findings, not a validated Indian field trial or a submission-ready superiority claim.
 
 ## Data and source confidence

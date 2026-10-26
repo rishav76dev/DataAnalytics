@@ -1,5 +1,7 @@
 # Executed validation
 
+The newer [validation card](age_mpc_validation.md) separates numerical verification from empirical applicability. The updated suite contains 43 tests; seventeen released full traces also pass independent AC/DC ledger, SOC/power, endpoint and ageing replay checks. A frozen 2025 experiment is complete, but no robust matched-reliability ageing superiority or empirically validated lifetime extension is established. Earlier validation notes below remain historical.
+
 Executed on 2026-10-24 in the cloud checkout. These are synthetic engineering results, not empirical research findings.
 
 - Frozen dependency installation including CPU SAC dependencies: passed.

@@ -1,5 +1,7 @@
 # Implementation versus research completion
 
+The frozen 2025 matched-reliability computational study is complete: eleven controllers and six capacity-feedback sensitivities, with full traces committed. Primary 2024–2025 demand provenance is verified. The proposed method does not pass robust superiority gates; seasonal calibration and battery cycle-depth applicability remain unresolved. Read [MPC_RESEARCH.md](../MPC_RESEARCH.md) and [validation](age_mpc_validation.md). Further SAC research training is paused. The earlier phase assessments below describe historical workflows.
+
 Updated after the constructed Indian reference experiment: [results](../INDIA_RESULTS.md), [reproduction](india_research_execution.md). These software and experimental deliverables do not establish adaptive superiority or a submission-ready field study.
 
 | Phase | Delivered implementation | Remaining research evidence |

@@ -1,0 +1,161 @@
+{
+  "overall": {
+    "origins": 4393,
+    "raw_joint_path_coverage": 0.4798543136808559,
+    "calibrated_joint_path_coverage": 0.9480992488049169
+  },
+  "by_month": {
+    "2024-07": {
+      "origins": 744,
+      "raw_joint_path_coverage": 0.2056451612903226,
+      "calibrated_joint_path_coverage": 0.9395161290322581
+    },
+    "2024-08": {
+      "origins": 744,
+      "raw_joint_path_coverage": 0.3602150537634409,
+      "calibrated_joint_path_coverage": 0.8978494623655914
+    },
+    "2024-09": {
+      "origins": 720,
+      "raw_joint_path_coverage": 0.4513888888888889,
+      "calibrated_joint_path_coverage": 0.9888888888888889
+    },
+    "2024-10": {
+      "origins": 744,
+      "raw_joint_path_coverage": 0.5779569892473119,
+      "calibrated_joint_path_coverage": 1.0
+    },
+    "2024-11": {
+      "origins": 720,
+      "raw_joint_path_coverage": 0.8194444444444444,
+      "calibrated_joint_path_coverage": 1.0
+    },
+    "2024-12": {
+      "origins": 721,
+      "raw_joint_path_coverage": 0.47434119278779474,
+      "calibrated_joint_path_coverage": 0.8626907073509015
+    }
+  },
+  "by_origin_hour": {
+    "0": {
+      "origins": 184,
+      "raw_joint_path_coverage": 0.4891304347826087,
+      "calibrated_joint_path_coverage": 0.9565217391304348
+    },
+    "1": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4918032786885246,
+      "calibrated_joint_path_coverage": 0.9398907103825137
+    },
+    "2": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4808743169398907,
+      "calibrated_joint_path_coverage": 0.9617486338797814
+    },
+    "3": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4918032786885246,
+      "calibrated_joint_path_coverage": 0.9617486338797814
+    },
+    "4": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.5081967213114754,
+      "calibrated_joint_path_coverage": 0.9562841530054644
+    },
+    "5": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.46994535519125685,
+      "calibrated_joint_path_coverage": 0.9344262295081968
+    },
+    "6": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.453551912568306,
+      "calibrated_joint_path_coverage": 0.9344262295081968
+    },
+    "7": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.43169398907103823,
+      "calibrated_joint_path_coverage": 0.9453551912568307
+    },
+    "8": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.46994535519125685,
+      "calibrated_joint_path_coverage": 0.9289617486338798
+    },
+    "9": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4808743169398907,
+      "calibrated_joint_path_coverage": 0.9508196721311475
+    },
+    "10": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4808743169398907,
+      "calibrated_joint_path_coverage": 0.9453551912568307
+    },
+    "11": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4426229508196721,
+      "calibrated_joint_path_coverage": 0.9508196721311475
+    },
+    "12": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4644808743169399,
+      "calibrated_joint_path_coverage": 0.9344262295081968
+    },
+    "13": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.48633879781420764,
+      "calibrated_joint_path_coverage": 0.9562841530054644
+    },
+    "14": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.46994535519125685,
+      "calibrated_joint_path_coverage": 0.9453551912568307
+    },
+    "15": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4371584699453552,
+      "calibrated_joint_path_coverage": 0.9453551912568307
+    },
+    "16": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4972677595628415,
+      "calibrated_joint_path_coverage": 0.9508196721311475
+    },
+    "17": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4972677595628415,
+      "calibrated_joint_path_coverage": 0.9508196721311475
+    },
+    "18": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4972677595628415,
+      "calibrated_joint_path_coverage": 0.9562841530054644
+    },
+    "19": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4972677595628415,
+      "calibrated_joint_path_coverage": 0.9562841530054644
+    },
+    "20": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.5136612021857924,
+      "calibrated_joint_path_coverage": 0.9453551912568307
+    },
+    "21": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.5027322404371585,
+      "calibrated_joint_path_coverage": 0.9453551912568307
+    },
+    "22": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4808743169398907,
+      "calibrated_joint_path_coverage": 0.9508196721311475
+    },
+    "23": {
+      "origins": 183,
+      "raw_joint_path_coverage": 0.4808743169398907,
+      "calibrated_joint_path_coverage": 0.9508196721311475
+    }
+  }
+}

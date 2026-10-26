@@ -1,5 +1,7 @@
 # Evaluation guide
 
+The completed frozen 2025 matched-reliability experiment is in [MPC_RESEARCH.md](MPC_RESEARCH.md), with [full committed traces and receipts](docs/evidence/age_mpc_v2/README.md). Its comparison includes daily/weekly paired intervals, common terminal-inventory normalization, calibration by month, published-model applicability checks and capacity-feedback sensitivities. [Reproduction instructions](docs/age_mpc_reproduction.md) distinguish operational EENS from normalization-day EENS. Earlier evaluation instructions below remain historical workflows.
+
 The later constructed Indian reference study evaluates 3,947 test hours and three SAC seeds per variant. See [reproduction steps](docs/india_research_execution.md) and [executed results](INDIA_RESULTS.md). The synthetic results and commands below remain available as the original engineering baseline. The expanded suite now has **30 tests**; the original suite described below had 18.
 
 Use the same audited data, battery configuration, initial SOC, chronology and physical action projection when comparing controllers. The default workflow is a synthetic engineering check; an empirical study additionally requires the controls in [docs/research_protocol.md](docs/research_protocol.md).

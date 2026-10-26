@@ -1,0 +1,18 @@
+{
+  "site": "Jaisalmer, Rajasthan, India",
+  "latitude": 26.9157,
+  "longitude": 70.9083,
+  "timezone": "UTC",
+  "sources": [
+    {
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=ALLSKY_SFC_SW_DWN%2CT2M%2CWS10M&community=RE&longitude=70.9083&latitude=26.9157&start=20250101&end=20251231&format=JSON&time-standard=UTC",
+      "file": "power_2025.json",
+      "sha256": "352c2bcc29c27f7dc0705d8d7fd35cf0316dba5080a29b61fa9387fd83af0a5d"
+    }
+  ],
+  "retrieved_or_cache_checked_utc": "2026-10-26T08:50:28.694242+00:00",
+  "data_kind": "NASA POWER weather estimates, not measured plant generation",
+  "licence_status": "Verify and archive current NASA terms before redistribution",
+  "wind_height_m": 10,
+  "irradiance_conversion": "hourly Wh/m2 / 1h -> W/m2"
+}

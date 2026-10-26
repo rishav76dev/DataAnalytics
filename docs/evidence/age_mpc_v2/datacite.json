@@ -1,0 +1,204 @@
+{
+  "data": {
+    "id": "10.17632/y58jknpgs8.2",
+    "type": "dois",
+    "attributes": {
+      "doi": "10.17632/y58jknpgs8.2",
+      "prefix": "10.17632",
+      "suffix": "y58jknpgs8.2",
+      "identifiers": [],
+      "alternateIdentifiers": [],
+      "creators": [
+        {
+          "name": "Mukherjee, Debanjan",
+          "nameType": "Personal",
+          "givenName": "Debanjan",
+          "familyName": "Mukherjee",
+          "affiliation": [],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Kalita, Karuna",
+          "nameType": "Personal",
+          "givenName": "Karuna",
+          "familyName": "Kalita",
+          "affiliation": [
+            "Indian Institute of Technology Guwahati"
+          ],
+          "nameIdentifiers": []
+        },
+        {
+          "name": "Kumar, Subhash",
+          "nameType": "Personal",
+          "givenName": "Subhash",
+          "familyName": "Kumar",
+          "affiliation": [
+            "Power Grid Corporation of India Ltd"
+          ],
+          "nameIdentifiers": []
+        }
+      ],
+      "titles": [
+        {
+          "title": "Electricity Demand, Solar and Wind Generation Data (September 2021- June 2025) of India at 1-hour interval"
+        }
+      ],
+      "publisher": "Mendeley Data",
+      "container": {},
+      "publicationYear": 2025,
+      "subjects": [
+        {
+          "subject": "Electricity"
+        },
+        {
+          "subject": "Electricity Market"
+        },
+        {
+          "subject": "Electricity Market Regulation"
+        }
+      ],
+      "contributors": [
+        {
+          "name": "Indian Institute of Technology Guwahati",
+          "nameType": "Organizational",
+          "affiliation": [],
+          "contributorType": "Other",
+          "nameIdentifiers": [
+            {
+              "schemeUri": "https://ror.org",
+              "nameIdentifier": "https://ror.org/0022nd079",
+              "nameIdentifierScheme": "ROR"
+            }
+          ]
+        },
+        {
+          "name": "Power Grid Corporation of India Ltd",
+          "nameType": "Organizational",
+          "affiliation": [],
+          "contributorType": "Other",
+          "nameIdentifiers": [
+            {
+              "schemeUri": "https://ror.org",
+              "nameIdentifier": "https://ror.org/0136vj189",
+              "nameIdentifierScheme": "ROR"
+            }
+          ]
+        }
+      ],
+      "dates": [
+        {
+          "date": "2025-09-15T18:07:44Z",
+          "dateType": "Issued"
+        }
+      ],
+      "language": null,
+      "types": {
+        "ris": "DATA",
+        "bibtex": "misc",
+        "citeproc": "dataset",
+        "schemaOrg": "Dataset",
+        "resourceType": "Dataset",
+        "resourceTypeGeneral": "Dataset"
+      },
+      "relatedIdentifiers": [
+        {
+          "relationType": "IsVersionOf",
+          "relatedIdentifier": "10.17632/y58jknpgs8",
+          "resourceTypeGeneral": "Dataset",
+          "relatedIdentifierType": "DOI"
+        }
+      ],
+      "relatedItems": [],
+      "sizes": [],
+      "formats": [],
+      "version": null,
+      "rightsList": [
+        {
+          "rightsUri": "info:eu-repo/semantics/openAccess"
+        },
+        {
+          "rights": "Creative Commons Attribution 4.0 International",
+          "rightsUri": "https://creativecommons.org/licenses/by/4.0/legalcode",
+          "schemeUri": "https://spdx.org/licenses/",
+          "rightsIdentifier": "cc-by-4.0",
+          "rightsIdentifierScheme": "SPDX"
+        }
+      ],
+      "descriptions": [
+        {
+          "description": "The data is provided by North-Eastern Regional Load Despatch Centre, Grid-India under the Ministry of Power, Government of India and consists of PMU-electricity demand, solar and wind generation data of all the combined five regional grid networks of India at the 1-hour interval between the period of September 2021 to December 2023",
+          "descriptionType": "Abstract"
+        }
+      ],
+      "geoLocations": [],
+      "fundingReferences": [],
+      "xml": "PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9InllcyI/Pgo8cmVzb3VyY2UgeG1sbnM9Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IiB4bWxuczp4c2k9Imh0dHA6Ly93d3cudzMub3JnLzIwMDEvWE1MU2NoZW1hLWluc3RhbmNlIiB4c2k6c2NoZW1hTG9jYXRpb249Imh0dHA6Ly9kYXRhY2l0ZS5vcmcvc2NoZW1hL2tlcm5lbC00IGh0dHA6Ly9zY2hlbWEuZGF0YWNpdGUub3JnL21ldGEva2VybmVsLTQuNC9tZXRhZGF0YS54c2QiPgogIDxpZGVudGlmaWVyIGlkZW50aWZpZXJUeXBlPSJET0kiPjEwLjE3NjMyL1k1OEpLTlBHUzguMjwvaWRlbnRpZmllcj4KICA8Y3JlYXRvcnM+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+TXVraGVyamVlLCBEZWJhbmphbjwvY3JlYXRvck5hbWU+CiAgICAgIDxnaXZlbk5hbWU+RGViYW5qYW48L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+TXVraGVyamVlPC9mYW1pbHlOYW1lPgogICAgPC9jcmVhdG9yPgogICAgPGNyZWF0b3I+CiAgICAgIDxjcmVhdG9yTmFtZSBuYW1lVHlwZT0iUGVyc29uYWwiPkthbGl0YSwgS2FydW5hPC9jcmVhdG9yTmFtZT4KICAgICAgPGdpdmVuTmFtZT5LYXJ1bmE8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+S2FsaXRhPC9mYW1pbHlOYW1lPgogICAgICA8YWZmaWxpYXRpb24geHNpOnR5cGU9ImFmZmlsaWF0aW9uIiBhZmZpbGlhdGlvbklkZW50aWZpZXI9Imh0dHBzOi8vcm9yLm9yZy8wMDIybmQwNzkiIGFmZmlsaWF0aW9uSWRlbnRpZmllclNjaGVtZT0iUk9SIiBzY2hlbWVVUkk9Imh0dHBzOi8vcm9yLm9yZy8iPkluZGlhbiBJbnN0aXR1dGUgb2YgVGVjaG5vbG9neSBHdXdhaGF0aTwvYWZmaWxpYXRpb24+CiAgICA8L2NyZWF0b3I+CiAgICA8Y3JlYXRvcj4KICAgICAgPGNyZWF0b3JOYW1lIG5hbWVUeXBlPSJQZXJzb25hbCI+S3VtYXIsIFN1Ymhhc2g8L2NyZWF0b3JOYW1lPgogICAgICA8Z2l2ZW5OYW1lPlN1Ymhhc2g8L2dpdmVuTmFtZT4KICAgICAgPGZhbWlseU5hbWU+S3VtYXI8L2ZhbWlseU5hbWU+CiAgICAgIDxhZmZpbGlhdGlvbiB4c2k6dHlwZT0iYWZmaWxpYXRpb24iIGFmZmlsaWF0aW9uSWRlbnRpZmllcj0iaHR0cHM6Ly9yb3Iub3JnLzAxMzZ2ajE4OSIgYWZmaWxpYXRpb25JZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnLyI+UG93ZXIgR3JpZCBDb3Jwb3JhdGlvbiBvZiBJbmRpYSBMdGQ8L2FmZmlsaWF0aW9uPgogICAgPC9jcmVhdG9yPgogIDwvY3JlYXRvcnM+CiAgPHRpdGxlcz4KICAgIDx0aXRsZT5FbGVjdHJpY2l0eSBEZW1hbmQsIFNvbGFyIGFuZCBXaW5kIEdlbmVyYXRpb24gRGF0YSAoU2VwdGVtYmVyIDIwMjEtIEp1bmUgMjAyNSkgb2YgSW5kaWEgYXQgMS1ob3VyIGludGVydmFsPC90aXRsZT4KICA8L3RpdGxlcz4KICA8cHVibGlzaGVyPk1lbmRlbGV5IERhdGE8L3B1Ymxpc2hlcj4KICA8cHVibGljYXRpb25ZZWFyPjIwMjU8L3B1YmxpY2F0aW9uWWVhcj4KICA8cmVzb3VyY2VUeXBlIHJlc291cmNlVHlwZUdlbmVyYWw9IkRhdGFzZXQiPkRhdGFzZXQ8L3Jlc291cmNlVHlwZT4KICA8c3ViamVjdHM+CiAgICA8c3ViamVjdD5FbGVjdHJpY2l0eTwvc3ViamVjdD4KICAgIDxzdWJqZWN0PkVsZWN0cmljaXR5IE1hcmtldDwvc3ViamVjdD4KICAgIDxzdWJqZWN0PkVsZWN0cmljaXR5IE1hcmtldCBSZWd1bGF0aW9uPC9zdWJqZWN0PgogIDwvc3ViamVjdHM+CiAgPGNvbnRyaWJ1dG9ycz4KICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9Ik90aGVyIj4KICAgICAgPGNvbnRyaWJ1dG9yTmFtZSBuYW1lVHlwZT0iT3JnYW5pemF0aW9uYWwiPkluZGlhbiBJbnN0aXR1dGUgb2YgVGVjaG5vbG9neSBHdXdhaGF0aTwvY29udHJpYnV0b3JOYW1lPgogICAgICA8bmFtZUlkZW50aWZpZXIgeHNpOnR5cGU9Im5hbWVJZGVudGlmaWVyIiBuYW1lSWRlbnRpZmllclNjaGVtZT0iUk9SIiBzY2hlbWVVUkk9Imh0dHBzOi8vcm9yLm9yZy8iPmh0dHBzOi8vcm9yLm9yZy8wMDIybmQwNzk8L25hbWVJZGVudGlmaWVyPgogICAgPC9jb250cmlidXRvcj4KICAgIDxjb250cmlidXRvciBjb250cmlidXRvclR5cGU9Ik90aGVyIj4KICAgICAgPGNvbnRyaWJ1dG9yTmFtZSBuYW1lVHlwZT0iT3JnYW5pemF0aW9uYWwiPlBvd2VyIEdyaWQgQ29ycG9yYXRpb24gb2YgSW5kaWEgTHRkPC9jb250cmlidXRvck5hbWU+CiAgICAgIDxuYW1lSWRlbnRpZmllciB4c2k6dHlwZT0ibmFtZUlkZW50aWZpZXIiIG5hbWVJZGVudGlmaWVyU2NoZW1lPSJST1IiIHNjaGVtZVVSST0iaHR0cHM6Ly9yb3Iub3JnLyI+aHR0cHM6Ly9yb3Iub3JnLzAxMzZ2ajE4OTwvbmFtZUlkZW50aWZpZXI+CiAgICA8L2NvbnRyaWJ1dG9yPgogIDwvY29udHJpYnV0b3JzPgogIDxkYXRlcz4KICAgIDxkYXRlIGRhdGVUeXBlPSJJc3N1ZWQiPjIwMjUtMDktMTVUMTg6MDc6NDRaPC9kYXRlPgogIDwvZGF0ZXM+CiAgPHJlbGF0ZWRJZGVudGlmaWVycz4KICAgIDxyZWxhdGVkSWRlbnRpZmllciByZXNvdXJjZVR5cGVHZW5lcmFsPSJEYXRhc2V0IiByZWxhdGVkSWRlbnRpZmllclR5cGU9IkRPSSIgcmVsYXRpb25UeXBlPSJJc1ZlcnNpb25PZiI+MTAuMTc2MzIveTU4amtucGdzODwvcmVsYXRlZElkZW50aWZpZXI+CiAgPC9yZWxhdGVkSWRlbnRpZmllcnM+CiAgPHJpZ2h0c0xpc3Q+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaW5mbzpldS1yZXBvL3NlbWFudGljcy9vcGVuQWNjZXNzIi8+CiAgICA8cmlnaHRzIHJpZ2h0c1VSST0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbGljZW5zZXMvYnkvNC4wIj5DcmVhdGl2ZSBDb21tb25zIEF0dHJpYnV0aW9uIDQuMCBJbnRlcm5hdGlvbmFsPC9yaWdodHM+CiAgPC9yaWdodHNMaXN0PgogIDxkZXNjcmlwdGlvbnM+CiAgICA8ZGVzY3JpcHRpb24gZGVzY3JpcHRpb25UeXBlPSJBYnN0cmFjdCI+VGhlIGRhdGEgaXMgcHJvdmlkZWQgYnkgTm9ydGgtRWFzdGVybiBSZWdpb25hbCBMb2FkIERlc3BhdGNoIENlbnRyZSwgR3JpZC1JbmRpYSB1bmRlciB0aGUgTWluaXN0cnkgb2YgUG93ZXIsIEdvdmVybm1lbnQgb2YgSW5kaWEgYW5kIGNvbnNpc3RzIG9mIFBNVS1lbGVjdHJpY2l0eSBkZW1hbmQsIHNvbGFyIGFuZCB3aW5kIGdlbmVyYXRpb24gZGF0YSBvZiBhbGwgdGhlIGNvbWJpbmVkIGZpdmUgcmVnaW9uYWwgZ3JpZCBuZXR3b3JrcyBvZiBJbmRpYSBhdCB0aGUgMS1ob3VyIGludGVydmFsIGJldHdlZW4gdGhlIHBlcmlvZCBvZiBTZXB0ZW1iZXIgMjAyMSB0byBEZWNlbWJlciAyMDIzPC9kZXNjcmlwdGlvbj4KICA8L2Rlc2NyaXB0aW9ucz4KPC9yZXNvdXJjZT4=",
+      "url": "https://data.mendeley.com/datasets/y58jknpgs8/2",
+      "contentUrl": null,
+      "metadataVersion": 0,
+      "schemaVersion": "http://datacite.org/schema/kernel-4",
+      "source": "api",
+      "isActive": true,
+      "state": "findable",
+      "reason": null,
+      "viewCount": 0,
+      "viewsOverTime": [],
+      "downloadCount": 0,
+      "downloadsOverTime": [],
+      "referenceCount": 0,
+      "citationCount": 0,
+      "citationsOverTime": [],
+      "partCount": 0,
+      "partOfCount": 0,
+      "versionCount": 0,
+      "versionOfCount": 1,
+      "created": "2025-09-15T18:08:23.000Z",
+      "registered": "2025-09-15T18:08:24.000Z",
+      "published": "2025",
+      "updated": "2025-09-15T18:08:24.000Z"
+    },
+    "relationships": {
+      "client": {
+        "data": {
+          "id": "bl.mendeley",
+          "type": "clients"
+        }
+      },
+      "provider": {
+        "data": {
+          "id": "elsevier",
+          "type": "providers"
+        }
+      },
+      "media": {
+        "data": {
+          "id": "10.17632/y58jknpgs8.2",
+          "type": "media"
+        }
+      },
+      "references": {
+        "data": []
+      },
+      "citations": {
+        "data": []
+      },
+      "parts": {
+        "data": []
+      },
+      "partOf": {
+        "data": []
+      },
+      "versions": {
+        "data": []
+      },
+      "versionOf": {
+        "data": [
+          {
+            "id": "10.17632/y58jknpgs8",
+            "type": "dois"
+          }
+        ]
+      }
+    }
+  }
+}

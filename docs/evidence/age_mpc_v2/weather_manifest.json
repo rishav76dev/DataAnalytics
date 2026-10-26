@@ -1,0 +1,38 @@
+{
+  "site": "Jaisalmer, Rajasthan, India",
+  "latitude": 26.9157,
+  "longitude": 70.9083,
+  "timezone": "UTC",
+  "sources": [
+    {
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=ALLSKY_SFC_SW_DWN%2CT2M%2CWS10M&community=RE&longitude=70.9083&latitude=26.9157&start=20200101&end=20201231&format=JSON&time-standard=UTC",
+      "file": "power_2020.json",
+      "sha256": "f40648ab2ee5b5d9de229fa8df7495e3317bbea8b08319ab93f27d1bf4d4816b"
+    },
+    {
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=ALLSKY_SFC_SW_DWN%2CT2M%2CWS10M&community=RE&longitude=70.9083&latitude=26.9157&start=20210101&end=20211231&format=JSON&time-standard=UTC",
+      "file": "power_2021.json",
+      "sha256": "9b24df22ff0bcb614e6431bb13c59214c1c1cf67a046eb3542095b33270fb7e7"
+    },
+    {
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=ALLSKY_SFC_SW_DWN%2CT2M%2CWS10M&community=RE&longitude=70.9083&latitude=26.9157&start=20220101&end=20221231&format=JSON&time-standard=UTC",
+      "file": "power_2022.json",
+      "sha256": "e0fbdf6cc5451b6108dbea1493d00cdfc22312bc4a9a49847129f37cd3ca297e"
+    },
+    {
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=ALLSKY_SFC_SW_DWN%2CT2M%2CWS10M&community=RE&longitude=70.9083&latitude=26.9157&start=20230101&end=20231231&format=JSON&time-standard=UTC",
+      "file": "power_2023.json",
+      "sha256": "33cf293f9667d11c8665e9660ff1b90767d681e96927031f88546b60b1514b6d"
+    },
+    {
+      "url": "https://power.larc.nasa.gov/api/temporal/hourly/point?parameters=ALLSKY_SFC_SW_DWN%2CT2M%2CWS10M&community=RE&longitude=70.9083&latitude=26.9157&start=20240101&end=20241231&format=JSON&time-standard=UTC",
+      "file": "power_2024.json",
+      "sha256": "ccc111973e793289f7173517c0d5171a6616d59ef2183318bc8aecbe7b2698f5"
+    }
+  ],
+  "retrieved_or_cache_checked_utc": "2026-10-25T18:24:54.079313+00:00",
+  "data_kind": "NASA POWER weather estimates, not measured plant generation",
+  "licence_status": "Verify and archive current NASA terms before redistribution",
+  "wind_height_m": 10,
+  "irradiance_conversion": "hourly Wh/m2 / 1h -> W/m2"
+}

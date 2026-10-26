@@ -1,5 +1,7 @@
 # Recorded results
 
+See [MPC_RESEARCH.md](MPC_RESEARCH.md) for the frozen 2025 degradation-aware MPC study. It does **not** establish robust matched-reliability ageing superiority; full hourly traces are committed. The measurements below belong to the earlier synthetic engineering demonstration and have not been replaced with newer results.
+
 Recorded on 2026-10-24 from executed cloud runs. These results use synthetic data and describe engineering validation, not real-world research performance.
 
 ## Run configuration

@@ -1,0 +1,121 @@
+{
+  "rule_based": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 2.842170943040401e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 8.673617379884035e-18
+  },
+  "fixed_age": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 2.842170943040401e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 7.979727989493313e-17
+  },
+  "adaptive_age": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 2.842170943040401e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 1.0408340855860843e-17
+  },
+  "adaptive_independent": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 2.842170943040401e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 7.979727989493313e-17
+  },
+  "scenario_envelope": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 2.842170943040401e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 8.847089727481716e-17
+  },
+  "fixed_persistence": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 2.842170943040401e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 5.724587470723463e-17
+  },
+  "adaptive_no_calendar": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 2.842170943040401e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 5.551115123125783e-17
+  },
+  "adaptive_raw": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 2.842170943040401e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 3.122502256758253e-17
+  },
+  "deterministic_age": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 2.842170943040401e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 2.3418766925686896e-17
+  },
+  "persistence_age": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 2.842170943040401e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 5.898059818321144e-17
+  },
+  "scenario": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 2.842170943040401e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 5.204170427930421e-18
+  },
+  "coupled_rule_based_25c": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 5.684341886080802e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 5.898059818321144e-17
+  },
+  "coupled_adaptive_age_25c": {
+    "max_dc_ledger_error_kwh": 5.684341886080802e-14,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 5.684341886080802e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 8.673617379884035e-17
+  },
+  "coupled_adaptive_independent_25c": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 5.684341886080802e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 7.112366251504909e-17
+  },
+  "coupled_rule_based_35c": {
+    "max_dc_ledger_error_kwh": 5.684341886080802e-14,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 5.684341886080802e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 3.469446951953614e-18
+  },
+  "coupled_adaptive_age_35c": {
+    "max_dc_ledger_error_kwh": 5.684341886080802e-14,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 5.684341886080802e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 2.2551405187698492e-17
+  },
+  "coupled_adaptive_independent_35c": {
+    "max_dc_ledger_error_kwh": 0.0,
+    "max_ac_balance_error_kw": 2.842170943040401e-14,
+    "max_soc_energy_error_kwh": 5.684341886080802e-14,
+    "operational_eens_error_kwh": 0.0,
+    "damage_replay_error": 3.469446951953614e-17
+  }
+}

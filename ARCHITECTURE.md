@@ -1,5 +1,7 @@
 # Architecture and mathematical contract
 
+The current research path adds `research_data.py` (primary-source audits and constructed India inputs), `phase_forecasts.py` (causal seasonal quantiles), `trajectory_calibration.py` (phase-aware joint residuals and delayed simultaneous deficit envelopes), and `age_mpc.py` (lexicographic service/reserve/wear optimization). `ageing.py` retains upstream integration and adds exact effective-age integration with applicability diagnostics. The staged workflow and frozen evidence are documented in [MPC_RESEARCH.md](MPC_RESEARCH.md) and [reproduction](docs/age_mpc_reproduction.md). SAC remains available for historical reproduction; additional research training is paused.
+
 ```mermaid
 flowchart LR
     D[Hourly PV / wind / load] --> A[Audit and chronological splits]

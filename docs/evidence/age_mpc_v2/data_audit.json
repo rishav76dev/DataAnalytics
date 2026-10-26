@@ -1,0 +1,85 @@
+{
+  "rows": 30504,
+  "start": "2021-12-31 18:30:00+00:00",
+  "end": "2025-06-24 17:30:00+00:00",
+  "missing_hours": 0,
+  "units": {
+    "pv_kw": "kW",
+    "wind_kw": "kW",
+    "load_kw": "kW"
+  },
+  "energy_kwh": {
+    "pv_kw": 588217.2732318501,
+    "wind_kw": 226259.85949321292,
+    "load_kw": 397082.07255598303
+  },
+  "source": {
+    "doi": "10.17632/y58jknpgs8.2",
+    "primary_sha256_verified": "482dad0c4d47a4e6ed284e41a3b1f5005c397ca149ea5bba121b111e7ed79467",
+    "primary_rows": 12984,
+    "primary_removed_summary_rows": 6,
+    "licence": "CC BY 4.0, verified via DataCite rights metadata",
+    "creators": [
+      {
+        "name": "Mukherjee, Debanjan",
+        "nameType": "Personal",
+        "givenName": "Debanjan",
+        "familyName": "Mukherjee",
+        "affiliation": [],
+        "nameIdentifiers": []
+      },
+      {
+        "name": "Kalita, Karuna",
+        "nameType": "Personal",
+        "givenName": "Karuna",
+        "familyName": "Kalita",
+        "affiliation": [
+          "Indian Institute of Technology Guwahati"
+        ],
+        "nameIdentifiers": []
+      },
+      {
+        "name": "Kumar, Subhash",
+        "nameType": "Personal",
+        "givenName": "Subhash",
+        "familyName": "Kumar",
+        "affiliation": [
+          "Power Grid Corporation of India Ltd"
+        ],
+        "nameIdentifiers": []
+      }
+    ],
+    "title": [
+      {
+        "title": "Electricity Demand, Solar and Wind Generation Data (September 2021- June 2025) of India at 1-hour interval"
+      }
+    ],
+    "units": "MW in primary workbook column header",
+    "timezone": "Naive source timestamps interpreted as Asia/Kolkata; contextual assumption, not explicit in registry",
+    "solar_peak_hour_assumption_check": 12
+  },
+  "mirror_primary_max_absolute_difference_mw": 0.0,
+  "mirror_primary_compared_hours": 12984,
+  "national_profile_not_local_site": true,
+  "mirror_path_sha256": "c77ed3e200565c5609bd52806bef98f4e7eac22da6609d60750c8ce7a5fb75ed",
+  "pre_2024_data": "pinned hourly mirror; full raw pre-2024 reaggregation not independently repeated",
+  "repair_count": 6,
+  "repair": "causal forward-fill of <=3 consecutive implausible demand hours",
+  "demand_training_year": 2022,
+  "demand_scale": 7.085225935721959e-08,
+  "generation_reference_capacities": {
+    "pv_capacity_kw": 47.8263233239988,
+    "wind_capacity_kw": 63.3819419071402
+  },
+  "renewable_multiplier": 2,
+  "weather_alignment": "piecewise-constant overlap averaging across UTC/IST half-hour offset",
+  "causality_scope": "Forecast causal on processed power series; resampling assumptions are not field measurement availability validation",
+  "wind_model": "simplified 10m wind power curve; no independent turbine or pack site validation",
+  "partitions": {
+    "fit": "2022",
+    "residual_pool": "2023",
+    "tail_calibration": "2024-01 through 2024-06",
+    "selection": "2024-07 through 2024-12 (development, previously inspected)",
+    "fresh_test": "2025-01-01 through 2025-06-24"
+  }
+}

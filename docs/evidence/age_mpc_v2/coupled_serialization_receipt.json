@@ -1,0 +1,6 @@
+{
+  "failure": "First coupled run failed saving numpy.bool_ after numerical replay checks passed",
+  "correction": "JSON conversion of numpy.generic to Python scalar; no numerical change",
+  "wrapper_sha256": "d596f0c5d6f00de9f595507157f5c8f93bef51113ce0569dc4d4dc100570bdcc",
+  "primary_source_unchanged": true
+}
