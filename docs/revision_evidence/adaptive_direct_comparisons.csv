@@ -1,0 +1,4 @@
+adaptive_minus,both_match_greedy_reliability_and_inventory,relative_blast_loss_reduction,paired_eens_ci95_24h_kwh_per_hour,paired_eens_ci95_168h_kwh_per_hour,paired_damage_ci95_24h_fraction_per_hour,paired_damage_ci95_168h_fraction_per_hour
+fixed_age,True,0.0178248850376147,"[0.0, 0.0]","[0.0, 0.0]","[-9.800990796960876e-08, -1.2492619130415323e-08]","[-1.3397081492495483e-07, 9.057083452818493e-09]"
+scenario_envelope,True,0.0006696783799999828,"[0.0, 0.0]","[0.0, 0.0]","[-4.909861287580324e-09, 3.124451066364804e-10]","[-5.164281757946181e-09, 5.269936859238426e-10]"
+adaptive_independent,False,-0.017233163608667557,"[-0.008842075098336382, 0.0]","[-0.008842075098336382, 0.0]","[3.1153857346406796e-08, 6.628224322912275e-08]","[2.5645836323769755e-08, 7.305316076272242e-08]"

@@ -1,5 +1,11 @@
 # Recorded results: degradation-aware adaptive-reserve MPC
 
+## Limited major-revision reporting update
+
+The revised [manuscript](paper/manuscript.tex) retains the original title and frozen 2025 base case. [Derived revision evidence](docs/revision_evidence/README.md) separates the validation-preselected independent adaptive comparator from reliability-matched greedy, fixed-reserve and envelope-matched scenario MPC; it reports operational versus all-hours EENS, loss-of-load hours, terminal inventory, direct paired daily/weekly intervals, throughput, rainflow EFC, SOC exposure and cycle-depth counts. A [monthly plot](docs/revision_evidence/monthly_coverage.pdf) shows February's 70.39% corrected simultaneous coverage. The extraction script verifies EENS and inventory against committed traces.
+
+Battery-stress measures are primary because the BLAST-Lite daily cycling regime is outside its fitted DoD range. A second published LFP model was screened but its lowest tested discharge rate is C/2 while this battery is limited to C/8, so no second numerical ageing estimate is presented. The renewable-shortage controller run cannot be completed from the committed release: the hourly source and frozen forecast/scenario arrays are absent. Its validation-only derating rule and required consistent-input replay are recorded in the revision evidence README. No stress-case result, battery-life superiority, nominal seasonal calibration or general runtime speedup is claimed.
+
 The frozen computational experiment is reproducible, but **robust ageing superiority at matched reliability has not been demonstrated**. This document summarizes the current study; [RESULTS.md](RESULTS.md) preserves the older synthetic experiment.
 
 Use [testscript.md](testscript.md) to check the numbers against the committed hourly traces, rather than relying only on this summary. The numerical experiment and evidence were released in commit `4750666732902d800075c1a24123efb872c2ff09`.
