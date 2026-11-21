@@ -1,5 +1,4 @@
-\documentclass[10pt]{article}
-\usepackage[margin=0.78in]{geometry}
+\documentclass[journal]{IEEEtran}
 \usepackage{amsmath,graphicx,booktabs,url}
 \title{Battery Storage Dispatch Scheduling for a Hybrid Solar-Wind Microgrid}
 \author{rishav76dev}
@@ -7,7 +6,7 @@
 \begin{document}
 \maketitle
 \begin{abstract}
-We evaluate forecast-informed adaptive-reserve model predictive control (MPC) for battery dispatch in a constructed islanded solar--wind microgrid. The chronologically frozen 2025 holdout contains 4,176 operational hours plus a common 24-hour terminal-inventory normalization. Greedy, tuned fixed-reserve, adaptive-reserve and envelope-matched scenario MPC all serve operational demand without shortfall in this base case. Adaptive MPC has a lower BLAST-Lite capacity-loss estimate than fixed reserve (1.2140\% versus 1.2360\%), but its weekly-block paired confidence interval includes zero and every primary ageing update falls below the model's fitted cycle-depth range. Direct operating measures show nearly equal throughput and equivalent full cycles for the matched methods, while adaptive control lowers time above 80\% state of charge relative to fixed reserve. Corrected simultaneous deficit-envelope coverage is 91.26\% overall but 70.39\% in February. These results document an operational trade-off and model limitations; they do not establish battery-life superiority or seasonal 95\% calibration.
+We evaluate forecast-informed adaptive-reserve model predictive control (MPC) for battery dispatch in a constructed islanded solar--wind microgrid. The chronologically frozen 2025 holdout contains 4,176 operational hours plus a common 24-hour terminal-inventory normalization. Greedy, tuned fixed-reserve, adaptive-reserve and envelope-matched scenario MPC all serve operational demand without shortfall in this base case. Adaptive MPC has a lower BLAST-Lite capacity-loss estimate than fixed reserve (1.2140\% versus 1.2360\%), but its weekly-block paired confidence interval includes zero and every primary ageing update falls below the model's fitted cycle-depth range. Direct operating measures show nearly equal throughput and operational equivalent full cycles for the matched methods, while adaptive control lowers time above 80\% state of charge relative to fixed reserve. Corrected simultaneous deficit-envelope coverage is 91.26\% overall but 70.39\% in February. These results document an operational trade-off and model limitations; they do not establish battery-life superiority or seasonal 95\% calibration.
 \end{abstract}
 
 \section{Objective and case}
@@ -25,7 +24,7 @@ with positive battery power on discharge. The greedy reference serves current de
 Operational energy LPSP is EENS divided by operational demand. Reliability matching requires the paired upper EENS difference to stay within 0.01 percentage points of operational demand at both 24-hour and 168-hour circular-block bootstrap lengths, with equal terminal energy. The test uses 1,000 replicates at each length. A positive ageing-superiority statement additionally requires negative paired damage upper bounds at both lengths, a practically meaningful reduction and stability under model/condition sensitivity. No bootstrap replication increase is used to seek significance. The last 24 hours use one common recharge-only policy: battery discharge is disabled, and all controllers reach 360 kWh. The normalization day is excluded from operational EENS and included in all-hours EENS and ageing.
 
 \section{Base-case results}
-\begin{table}[ht]
+\begin{table*}[t]
 \centering\small
 \begin{tabular}{lrrrrr}
 \toprule
@@ -40,14 +39,30 @@ Scenario + matched envelope & 0 & 9.160 & 0 & 1763 & 1.2148 \\
 \bottomrule
 \end{tabular}
 \caption{Frozen 2025 holdout. The first 4,176 hours are operational; the common final 24 hours add 9.1599 kWh EENS for every method. All terminal inventories are 360 kWh. BLAST-Lite values are exploratory model estimates, not measured ageing.}
-\end{table}
+\end{table*}
 
 The preselected independent comparator sheds 12.308 kWh (0.0210\% operational LPSP), beyond the 5.8652 kWh matching allowance. Its lower modelled damage cannot support a matched-reliability benefit. Greedy, fixed reserve, adaptive reserve and envelope-matched scenario MPC have zero operational EENS, zero loss-of-load hours and equal terminal inventory. Their paired EENS upper differences are zero at both block lengths. Adaptive versus fixed reserve reduces modelled loss by 0.0220 percentage points (1.78\% relative); its 168-hour paired damage interval includes zero. Adaptive versus envelope-matched scenario MPC differs by only 0.0008 percentage points of modelled loss; its daily and weekly damage intervals both include zero. Thus no robust matched-reliability ageing superiority is established.
 
-Direct battery-stress measures support a narrower interpretation. Greedy, fixed, adaptive and envelope-matched scenario controllers each have approximately 47,626 kWh operational DC throughput and 59.575 all-hours rainflow equivalent full cycles. Adaptive control has 1,755 of 4,176 operational hours above 80\% SOC, versus 2,037 for fixed reserve and 1,763 for scenario MPC. Its operational mean SOC is 0.7234, compared with 0.7477 and 0.7243 respectively. Rainflow depth distributions and the reproducible extraction script accompany the release. These measures describe operation; none is an observed capacity-loss measurement.
+Direct battery-stress measures support a narrower interpretation. Greedy, fixed, adaptive and envelope-matched scenario controllers each have approximately 47,626 kWh operational DC throughput. Table~\ref{tab:rainflow} separates rainflow accounting at the operational endpoint from the complete trace. The matched methods have 59.532--59.533 operational equivalent full cycles (EFC), versus 59.575 EFC after terminal normalization. The latter adds one half cycle below 10\% depth; all other depth-bin counts are unchanged. Rainflow closure makes this a boundary-sensitive comparison, not a measured incremental ageing contribution of the last day. Adaptive control has 1,755 of 4,176 operational hours above 80\% SOC, versus 2,037 for fixed reserve and 1,763 for scenario MPC. Its operational mean SOC is 0.7234, compared with 0.7477 and 0.7243 respectively. These measures describe operation; none is an observed capacity-loss measurement.
+
+\begin{table*}[t]
+\centering\small
+\begin{tabular}{lrrrrrrr}
+\toprule
+Method & Op. EFC & All EFC & $<10\%$ & $10$--$20\%$ & $20$--$50\%$ & $\geq 50\%$ & Op. cycles \\
+\midrule
+Greedy & 59.5331 & 59.5753 & 33.5 & 20.5 & 129.0 & 3.5 & 186.5 \\
+Independent adaptive & 59.5007 & 59.5429 & 23.5 & 20.5 & 125.0 & 8.5 & 177.5 \\
+Fixed reserve & 59.5316 & 59.5753 & 33.5 & 20.5 & 129.0 & 3.5 & 186.5 \\
+Adaptive reserve & 59.5331 & 59.5753 & 27.5 & 22.5 & 124.0 & 8.5 & 182.5 \\
+Scenario + matched envelope & 59.5331 & 59.5753 & 27.5 & 22.5 & 124.0 & 8.5 & 182.5 \\
+\bottomrule
+\end{tabular}
+\caption{Rainflow stress calculated separately for the 4,176 operational hours and all 4,200 hours. Depth-bin columns count operational cycles weighted by half-cycle multiplicity; the full-trace counts have 0.5 more cycle in the $<10\%$ bin for every method. Both calculations prepend the initial 50\% SOC.}\label{tab:rainflow}
+\end{table*}
 
 \section{Forecasts, uncertainty and computation}
-The learned forecast has 5.299 kW pooled future-lead MAE and 10.127 kW RMSE, versus 4.591 kW MAE for weekly persistence; a comparable persistence RMSE was not released. Forecast superiority is therefore not claimed. Corrected simultaneous deficit-envelope coverage improves from 19.34\% raw to 91.26\% over the holdout, but it is 70.39\% in February and misses nominal 95\% overall. The monthly pattern appears in Fig.~\ref{fig:coverage}. For the adaptive method, the recorded reserve-infeasible fraction is 34.38\% of all hours; the same envelope makes scenario MPC's fraction equal. The independent variant records 25.81\%. At the end of each adaptive dispatch step, stored energy meets the recorded requested target in 34.87\% of operational hours. Reserve requests are capped at physical full storage when infeasible. Monthly envelope-width records were not preserved in the released summary, so coverage alone cannot establish sharpness.
+The learned forecast has 5.299 kW pooled future-lead MAE and 10.127 kW RMSE, versus 4.591 kW MAE for weekly persistence; a comparable persistence RMSE was not released. Forecast superiority is therefore not claimed. Corrected simultaneous deficit-envelope coverage improves from 19.34\% raw to 91.26\% over the holdout, but it is 70.39\% in February and misses nominal 95\% overall. February is 20.87 percentage points below the aggregate, indicating uneven seasonal performance. The monthly pattern appears in Fig.~\ref{fig:coverage}; neither the aggregate nor the monthly results support a nominal 95\% calibration claim. For the adaptive method, the recorded reserve-infeasible fraction is 34.38\% of all hours; the same envelope makes scenario MPC's fraction equal. The independent variant records 25.81\%. At the end of each adaptive dispatch step, stored energy meets the recorded requested target in 34.87\% of operational hours. Reserve requests are capped at physical full storage when infeasible. Monthly envelope-width records were not preserved in the released summary, so coverage alone cannot establish sharpness.
 
 \begin{figure}[ht]
 \centering
@@ -62,6 +77,6 @@ The published BLAST-Lite LFP-Gr model is implemented with numerical checks again
 
 All four principal base-case controllers have zero operational EENS, limiting reliability discrimination. A renewable-shortage sensitivity requires a derating chosen on development data and consistent derating of actual PV/wind, forecasts and scenarios. The raw hourly source and frozen forecast/scenario arrays are not included in the committed review release, so that controller experiment is not reported here. The load proxy, simplified weather-to-generation conversion, single site, assumed battery temperature and lack of independent pack measurements further limit generalization. The contribution is a physically constrained adaptive-reserve dispatch comparison with explicit reliability, battery-stress and uncertainty-calibration diagnostics, not a claim that the proposed method dominates every baseline.
 
-\bibliographystyle{plain}
+\bibliographystyle{IEEEtran}
 \bibliography{references}
 \end{document}

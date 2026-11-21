@@ -1,7 +1,7 @@
 """Derive revision tables and a calibration plot from the immutable release.
 
-No controller selection or dispatch is performed here. The 24-hour normalization
-period is excluded from operational measures and included in the ageing replay.
+No controller selection or dispatch is performed here. Operational and all-hours
+rainflow summaries are calculated separately with the same initial SOC.
 """
 
 import csv
@@ -20,13 +20,24 @@ import rainflow
 ROOT = Path("docs/evidence/age_mpc_v2")
 OUT = Path("docs/revision_evidence")
 METHODS = ("rule_based", "adaptive_independent", "fixed_age", "adaptive_age", "scenario_envelope")
+DEPTH_BINS = ((0, 0.1), (0.1, 0.2), (0.2, 0.5), (0.5, 1.01))
 
 
-def write_csv(path, rows):
+def write_csv(path, rows, lineterminator="\r\n"):
     with path.open("w", newline="") as stream:
-        writer = csv.DictWriter(stream, fieldnames=list(rows[0]))
+        writer = csv.DictWriter(stream, fieldnames=list(rows[0]), lineterminator=lineterminator)
         writer.writeheader()
         writer.writerows(rows)
+
+
+def cycle_stats(soc):
+    # Include the physical initial SOC before the first recorded hourly state.
+    cycles = list(rainflow.extract_cycles(np.r_[0.5, soc.to_numpy()]))
+    count = np.array([cycle[2] for cycle in cycles], float)
+    depth = np.array([cycle[0] for cycle in cycles], float)
+    bins = [float(count[(depth >= low) & (depth < high)].sum()) for low, high in DEPTH_BINS]
+    assert abs(sum(bins) - count.sum()) < 1e-8
+    return float((depth * count).sum()), bins, float(count.sum())
 
 
 def main():
@@ -46,16 +57,15 @@ def main():
         assert abs(trace.unserved_kw.sum() - float(row["all_hours_eens_kwh"])) < 1e-6
         assert abs(trace.energy_kwh.iloc[-1] - 360) < 1e-6
 
-        # Rainflow uses SOC fraction, so depth bins are fractions of rated capacity.
-        cycles = list(rainflow.extract_cycles(np.r_[0.5, trace.soc.to_numpy()]))
-        count = np.array([c[2] for c in cycles], float)
-        depth = np.array([c[0] for c in cycles], float)
-        bin_counts = [float(count[(depth >= low) & (depth < high)].sum())
-                      for low, high in ((0, 0.1), (0.1, 0.2), (0.2, 0.5), (0.5, 1.01))]
+        # Rainflow uses SOC fraction; depth bins are fractions of rated capacity.
+        operational_efc, operational_bins, operational_count = cycle_stats(op.soc)
+        all_hours_efc, all_hours_bins, all_hours_count = cycle_stats(trace.soc)
+        assert abs(all_hours_efc - float(row["rainflow_efc"])) < 1e-9
         stress.append({
             "controller": name,
             "operational_dc_throughput_kwh": float(op.throughput_kwh.sum()),
-            "all_hours_rainflow_efc": float((depth * count).sum()),
+            "operational_rainflow_efc": operational_efc,
+            "all_hours_rainflow_efc": all_hours_efc,
             "operational_mean_soc": float(op.soc.mean()),
             "operational_hours_soc_above_80_percent": int((op.soc > 0.8).sum()),
             "operational_fraction_soc_above_80_percent": float((op.soc > 0.8).mean()),
@@ -67,11 +77,16 @@ def main():
                 float((op.energy_kwh >= op.requested_reserve_kwh - 1e-8).mean())
                 if name in {"adaptive_age", "adaptive_independent", "scenario_envelope"} else ""
             ),
-            "all_hours_cycle_count_dod_below_10_percent": bin_counts[0],
-            "all_hours_cycle_count_dod_10_to_20_percent": bin_counts[1],
-            "all_hours_cycle_count_dod_20_to_50_percent": bin_counts[2],
-            "all_hours_cycle_count_dod_at_least_50_percent": bin_counts[3],
-            "all_hours_cycle_count": float(count.sum()),
+            "operational_cycle_count_dod_below_10_percent": operational_bins[0],
+            "operational_cycle_count_dod_10_to_20_percent": operational_bins[1],
+            "operational_cycle_count_dod_20_to_50_percent": operational_bins[2],
+            "operational_cycle_count_dod_at_least_50_percent": operational_bins[3],
+            "operational_cycle_count": operational_count,
+            "all_hours_cycle_count_dod_below_10_percent": all_hours_bins[0],
+            "all_hours_cycle_count_dod_10_to_20_percent": all_hours_bins[1],
+            "all_hours_cycle_count_dod_20_to_50_percent": all_hours_bins[2],
+            "all_hours_cycle_count_dod_at_least_50_percent": all_hours_bins[3],
+            "all_hours_cycle_count": all_hours_count,
         })
         intervals = gates["comparisons"].get(name, {}).get("paired_intervals", {})
         comparison.append({
@@ -90,7 +105,7 @@ def main():
             "paired_vs_greedy_damage_upper_24h_fraction_per_hour": intervals.get("24", {}).get("damage_mean_hourly_difference", {}).get("ci95", [None, None])[1],
             "paired_vs_greedy_damage_upper_168h_fraction_per_hour": intervals.get("168", {}).get("damage_mean_hourly_difference", {}).get("ci95", [None, None])[1],
         })
-    write_csv(OUT / "battery_stress.csv", stress)
+    write_csv(OUT / "battery_stress.csv", stress, lineterminator="\n")
     write_csv(OUT / "matched_comparison.csv", comparison)
     direct = []
     for name in ("fixed_age", "scenario_envelope", "adaptive_independent"):
